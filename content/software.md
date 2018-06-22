@@ -10,12 +10,12 @@ draft: false
     </p>
 </div>
 <div class="row">
-    <div class="jumbotron" style="background-image:url('/img/software_one.jpg');width:100%;height:350px;background-size: cover; background-position: center bottom"></div>
+    <div class="jumbotron" style="background-image:url({{< relURL "/img/software_one.jpg" >}});width:100%;height:350px;background-size: cover; background-position: center bottom"></div>
 </div>
 <div class="row pb-5 pt-5">
     <div class="col-6 text-center">
         <h3 class=" center">Integration von Lerninhalten</h3>
-        <img src="/img/integration.png" alt="" class="img img-fluid center" style="max-height:200px;">
+        <img src="{{< relURL "/img/integration.png" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
     </div>
     <div class="col-6">
         <p>
@@ -31,13 +31,13 @@ draft: false
     </div>
     <div class="col-6 text-center">
         <h3 class="center">Cloudlösung und zentrale Inhaltssteuerung</h3>
-        <img src="/img/cloud.png" alt="" class="img img-fluid center"  style="max-height:200px;">
+        <img src="{{< relURL "/img/cloud.png" >}}" alt="" class="img img-fluid center"  style="max-height:200px;">
     </div>
 </div>
 <div class="row pb-5 pt-5">
     <div class="col-6 text-center">
         <h3 class="center">Learning analytics</h3>
-        <img src="/img/analytics.png" alt="" class="img img-fluid center" style="max-height:200px;">
+        <img src="{{< relURL "/img/analytics.png" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
     </div>
     <div class="col-6">
         <p>

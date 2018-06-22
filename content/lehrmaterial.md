@@ -6,7 +6,7 @@ draft: false
 
 <div class="row pb-5">
     <div class="col-6">
-        <img src="/img/lehrmaterial_one.jpg" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
+        <img src="{{< relURL "/img/lehrmaterial_one.jpg" >}}" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
     </div>
     <div class="col-6">
         <p>
@@ -24,6 +24,6 @@ draft: false
         </p>
     </div>
     <div class="col-6">
-        <img src="/img/lehrmaterial_two.jpg" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
+        <img src="{{< relURL "/img/lehrmaterial_two.jpg" >}}" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
     </div>
 </div>

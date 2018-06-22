@@ -16,12 +16,12 @@ titleClass: "heading"
         </p>
     </div>
     <div class="col-6">
-        <img src="/img/vision.jpg" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
+        <img src="{{< relURL "/img/vision.jpg" >}}" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
     </div>
 </div>
 <div class="row pb-5">
     <div class="col-6">
-        <img src="/img/vision_two.jpg" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
+        <img src="{{< relURL "/img/vision_two.jpg" >}}" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
     </div>
     <div class="col-6">
         <p>
@@ -45,6 +45,6 @@ titleClass: "heading"
         </p>
     </div>
     <div class="col-6">
-        <img src="/img/vision_three.jpg" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
+        <img src="{{< relURL "/img/vision_three.jpg" >}}" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
     </div>
 </div>

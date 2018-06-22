@@ -8,17 +8,17 @@
                         <div class="row" >
                             <a href="https://impactchallenge.withgoogle.com/deutschland/charity/IT4Kids" data-toggle="tooltip"
                                 title="Erfahre mehr über Google Impact Challenge" class="winners">
-                                Winners of <img src="/img/medal.png" alt="Medal" style="height:60px;">
+                                Winners of <img src="{{ "/img/medal.png" | relURL }}" alt="Medal" style="height:60px;">
                             </a>
                             <a onclick="toggle_celebration()" data-toggle="tooltip" title="Klicke hier für eine Überrashung" class="winners">
-                                <img id="celebrate" src="/img/celebrate.png" alt="Celebration"
+                                <img id="celebrate" src="{{ "/img/celebrate.png" | relURL }}" alt="Celebration"
                                 style="height:20px; margin-bottom:-25px!important;">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row text-center">
-                    <img src="/img/robot.gif" style="height:150px;margin-left:auto;margin-right:auto;" id="robot">
+                    <img src="{{ "/img/robot.gif" | relURL }}" style="height:150px;margin-left:auto;margin-right:auto;" id="robot">
                 </div>
             </div>
             <div class="col-sm-8 col-12">
@@ -37,7 +37,7 @@
     </div>
 </section>
 
-<section id="cards" style="margin-top:200px;background:url('/img/hypnotize.png');">
+<section id="cards" style="margin-top:200px;background:url('{{ "/img/hypnotize.png" | relURL }}');">
     <div class="container">
         <div class="row pb-3" >
             <div class="col-6">
