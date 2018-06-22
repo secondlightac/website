@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        {{ partial "header.html" . }}
+        {{ block "style" . }}{{ end }}
+    </head>
+	<body style="zoom:0.9;">
+        {{ partial "navbar.html" . }}
+        {{ partial "socialIcons.html" . }}
+		<div class="pt-5 mt-5">
+            {{ block "main" . }}{{ end }}
+        </div>
+        {{ partial "footer.html" . }}
+        {{ block "script" . }}{{ end }}
+	</body>
+</html>

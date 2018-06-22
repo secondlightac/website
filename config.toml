@@ -1,0 +1,45 @@
+baseURL = "https://static.it-for-kids.org/"
+languageCode = "de-de"
+title = "IT4Kids"
+
+copyright = "<span class=\"copyright\">Copyright &copy; 2018 IT4Kids</span>"
+
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = -100
+
+  [[menu.main]]
+    name = "Vision"
+    url = "/vision"
+    weight = -90
+
+  [[menu.main]]
+    name = "Software"
+    url = "/software"
+    weight = -80
+
+  [[menu.main]]
+    name = "Lehrmaterial"
+    url = "/lehrmaterial"
+    weight = -70
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = -60
+
+  [[menu.main]]
+    name = "Team"
+    url = "/team"
+    weight = -50
+  [[menu.main]]
+    name = "Mitmachen"
+    url = "/#mitmachen"
+    weight = -40
+
+[params]
+  facebook = "https://www.facebook.com/itforkids.org/"
+  credits = "Developed by <strong>IT4KIDS member</strong> <a href=\"mailto:asoliman96@gmail.com\">Soliman</a>"

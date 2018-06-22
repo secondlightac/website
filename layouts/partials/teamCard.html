@@ -1,0 +1,12 @@
+<div class="col-md-3 pb-3">
+    <div class="card shadow">
+        <img class="card-img-top img-fluid" src="{{ .Params.image }}" alt="Card Image">
+        <div class="card-body text-center" style="height:250px">
+            <h4 class="card-title center">{{ .Title }}</h4>
+            <p class="card-text">{{ .Content }}</p>
+            <span data-toggle="tooltip" title="{{ .Params.email }}">
+                <i class="fa fa-envelope" style="color:gray;" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+</div>

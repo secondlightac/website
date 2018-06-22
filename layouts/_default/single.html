@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container" style="max-width: 800px;">
+    <div class="row mb-4">
+        <h3 class="center{{ if .Params.titleClass }} {{ .Params.titleClass }}{{ end }}">{{.Title }}</h3>
+    </div>
+    {{ if .Params.description }}
+    <div class="row mb-5 pb-3">
+        <span class="center text-muted">
+            {{ .Params.description | safeHTML }}
+        </span>
+    </div>
+    {{ end }}
+    {{ .Content }}
+</div>
+{{ end }}
