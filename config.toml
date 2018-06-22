@@ -2,9 +2,9 @@ baseURL = "https://static.it-for-kids.org/"
 languageCode = "de-de"
 title = "IT4Kids"
 
-publishDir = "docs"
-
 copyright = "<span class=\"copyright\">Copyright &copy; 2018 IT4Kids</span>"
+
+publishDir = "docs"
 
 [menu]
 
