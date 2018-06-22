@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on IT4Kids</title>
-    <link>https://static.it-for-kids.org/categories/</link>
+    <link>https://it4kids.github.io/website/categories/</link>
     <description>Recent content in Categories on IT4Kids</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <copyright>&lt;span class=&#34;copyright&#34;&gt;Copyright &amp;copy; 2018 IT4Kids&lt;/span&gt;</copyright>
     
-	<atom:link href="https://static.it-for-kids.org/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://it4kids.github.io/website/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
