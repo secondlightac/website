@@ -4,8 +4,6 @@ title = "IT4Kids"
 
 copyright = "<span class=\"copyright\">Copyright &copy; 2018 IT4Kids</span>"
 
-publishDir = "docs"
-
 [menu]
 
   [[menu.main]]
