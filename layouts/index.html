@@ -68,27 +68,3 @@ var typed = new Typed('.main_text', {
 }); 
 </script>
 {{ end }}
-
-{{ define "style" }}
-<style>
-@media (min-width: 576px) {
-    #robot {
-        margin-top: 120px;
-    }
-}
-@media (min-width: 769px) {
-    .card p {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-}
-@media (max-width: 991px) {
-    #cards .card {
-        height: 350px !important;
-    }
-    #cards .card h3 {
-        padding-top: 25% !important;
-    }
-}
-</style>
-{{ end }}

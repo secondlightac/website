@@ -95,7 +95,6 @@ section {
     margin-bottom: 125px;
 }
 #cards a {
-    color: black;
     text-decoration: none;
 }
 body {
@@ -108,9 +107,23 @@ body {
     font-size: xx-large;
 }
 
-@media (max-width: 991px){
-    .console {
-        min-height:220px !important;
+@media (min-width: 576px) {
+    #robot {
+        margin-top: 120px;
+    }
+}
+@media (min-width: 769px) {
+    .card p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+@media (max-width: 991px) {
+    #cards .card {
+        height: 350px !important;
+    }
+    #cards .card h3 {
+        padding-top: 25% !important;
     }
 }
 
@@ -125,6 +138,12 @@ body {
 }
 
 /* Console*/
+@media (max-width: 991px){
+    .console {
+        min-height:220px !important;
+    }
+}
+
 .console {
     counter-reset: line;
     width: 100%;
