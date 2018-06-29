@@ -13,28 +13,29 @@ copyright = "<span class=\"copyright\">Copyright &copy; 2018 IT4Kids</span>"
 
   [[menu.main]]
     name = "Vision"
-    url = "/vision"
+    url = "/vision/"
     weight = -90
 
   [[menu.main]]
     name = "Software"
-    url = "/software"
+    url = "/software/"
     weight = -80
 
   [[menu.main]]
     name = "Lehrmaterial"
-    url = "/lehrmaterial"
+    url = "/lehrmaterial/"
     weight = -70
 
   [[menu.main]]
     name = "Blog"
-    url = "/blog"
+    url = "/blog/"
     weight = -60
 
   [[menu.main]]
     name = "Team"
-    url = "/team"
+    url = "/team/"
     weight = -50
+
   [[menu.main]]
     name = "Mitmachen"
     url = "/#mitmachen"
@@ -42,4 +43,3 @@ copyright = "<span class=\"copyright\">Copyright &copy; 2018 IT4Kids</span>"
 
 [params]
   facebook = "https://www.facebook.com/itforkids.org/"
-  credits = "Developed by <strong>IT4Kids member</strong> <a href=\"mailto:asoliman96@gmail.com\">Soliman</a>"

@@ -1,16 +1,17 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-default fixed-top navbar-custom" style="background-color: #ffffffc7;">
+<nav class="navbar navbar-expand-md navbar-default bg-light navbar-custom">
     <a class="navbar-brand" href="/">
-        <img id="logo" alt="IT4Kids Logo" class="hidden-xs" src="{{ "/img/logo.png" | relURL }}" style="height:85px;padding:7.5px;"></img>
+        <img id="logo" alt="IT4Kids Logo" class="hidden-xs" src="{{ `/img/logo.svg` | relURL }}" style="height:85px;padding:7.5px;"></img>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        Menu <i class="fa fa-bars"></i>
+        Menu <i class="fas fa-bars"></i>
     </button>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto text-center">
+            {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-            <li class="nav-item{{ if eq .Name "Mitmachen" }} active{{ end }}">
+            <li class="nav-item {{if eq ($currentPage.Permalink | relURL) (.URL | safeHTML) }} active{{end}}">
                 <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
             </li>
             {{ end }}

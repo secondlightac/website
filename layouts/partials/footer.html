@@ -6,19 +6,16 @@
             </div>
             <div class="col-4">
                 <ul class="list-inline social-buttons text-center">
-                    <li class="list-inline-item"><a href="{{ .Site.Params.facebook }}"><i class="fa fa-facebook"></i></a>
+                    <li class="list-inline-item"><a href="{{ .Site.Params.facebook }}"><i class="fab fa-facebook-f"></i></a>
                     </li>
                 </ul>
             </div>
             <div class="col-4">
                 <ul class="list-inline quicklinks" style="float:right">
-                    <li class="list-inline-item"><a href="{{ relref . "impressum.md" }}">Impressum</a>
+                    <li class="list-inline-item"><a href="{{ relref . `impressum.md` }}">Impressum</a>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="row">
-            <span class="copyright center">{{ .Site.Params.credits | safeHTML }}</span>
         </div>
     </div>
 </footer>

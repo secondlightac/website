@@ -31,7 +31,7 @@ draft: false
     </div>
     <div class="col-6 text-center">
         <h3 class="center">Cloudlösung und zentrale Inhaltssteuerung</h3>
-        <img src="{{< relURL "/img/cloud.png" >}}" alt="" class="img img-fluid center"  style="max-height:200px;">
+        <img src="{{< relURL "/img/cloud.png" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
     </div>
 </div>
 <div class="row pb-5 pt-5">
