@@ -1,0 +1,19 @@
+{{ define "meta" }}
+<meta http-equiv="refresh" content="0; URL={{ .Params.redirect }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    <div class="row mb-4">
+        <h3 class="center">{{ .Title }}</h3>
+    </div>
+
+    <div class="row">
+        {{ .Content }}
+    </div>
+
+    <div class="row">
+        <p>Wenn Sie nicht automatisch weitergeleitet werden, dann klicken Sie bitte <a href="{{ .Params.redirect }}">hier</a>.</p>
+    </div>
+</div>
+{{ end }}
