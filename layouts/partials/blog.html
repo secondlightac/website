@@ -10,16 +10,7 @@
         </div>
         <div class="row">
             {{ range first 3 (where .Data.Pages "Section" "blog") }}
-            <div class="col-sm-4 col-12 pb-3" style="margin-left:auto;margin-right:auto;">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{ .Params.image }}" alt="Post Image" style="height:200px;">
-                    <div class="card-body">
-                        <h4 class="card-title" style="height:75px;overflow-y: scroll;">{{ .Title }}</h4>
-                        <p class="card-text">{{ truncate 100 .Content }}</p>
-                        <a href="{{ .URL }}" class="btn btn-primary">Weiterlesen</a>
-                    </div>
-                </div>
-            </div>
+                {{ partial "blogCard.html" . }}
             {{ end }}
         </div>
     </div>

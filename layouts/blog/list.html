@@ -11,16 +11,7 @@
 
     <div class="row">
         {{ range .Data.Pages }}
-        <div class="col-md-3 col-sm-4 col-6 m-2">
-            <div class="card">
-                <img class="card-img-top" src="{{ .Params.image }}" style="height:150px" alt="Post Image">
-                <div class="card-body">
-                    <h4 class="card-title" style="height:75px">{{ .Title }}</h4>
-                    <p class="card-text">{{ truncate 100 .Content }}</p>
-                    <a href="{{ .URL }}" class="btn btn-primary">Weiterlesen</a>
-                </div>
-            </div>
-        </div>
+            {{ partial "blogCard.html" . }}
         {{ end }}
     </div>
 </div>
