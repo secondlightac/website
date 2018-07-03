@@ -15,7 +15,7 @@ draft: false
 <div class="row pb-5 pt-5">
     <div class="col-md-6 col-12 mb-4 text-center">
         <h3 class=" center">Integration von Lerninhalten</h3>
-        <img src="{{< relURL "/img/integration.png" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
+        <img src="{{< relURL "/img/icon-puzzle.svg" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
     </div>
     <div class="col-md-6 col-12">
         <p>
@@ -26,7 +26,7 @@ draft: false
 <div class="row pb-5 pt-5">
     <div class="col-md-6 col-12 order-md-2 mb-4 text-center">
         <h3 class="center">Cloudlösung und zentrale Inhaltssteuerung</h3>
-        <img src="{{< relURL "/img/cloud.png" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
+        <img src="{{< relURL "/img/icon-server.svg" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
     </div>
     <div class="col-md-6 order-md-1 col-12">
         <p>
@@ -37,7 +37,7 @@ draft: false
 <div class="row pb-5 pt-5">
     <div class="col-md-6 col-12 mb-4 text-center">
         <h3 class="center">Learning analytics</h3>
-        <img src="{{< relURL "/img/analytics.png" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
+        <img src="{{< relURL "/img/icon-analyse.svg" >}}" alt="" class="img img-fluid center" style="max-height:200px;">
     </div>
     <div class="col-md-6 col-12">
         <p>
