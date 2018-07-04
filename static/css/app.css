@@ -66,14 +66,6 @@ body {
         padding-right: 5%;
     }
 }
-@media (max-width: 991px) {
-    #cards .card {
-        height: 350px !important;
-    }
-    #cards .card h3 {
-        padding-top: 25% !important;
-    }
-}
 
 .hoverable .hover {
     display: none;
@@ -251,7 +243,7 @@ body {
     display: table-cell;
     vertical-align: bottom;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     #footer-row {
         display: block;
         width: auto;
@@ -316,4 +308,11 @@ aside.sidebar .single h3.side-title:after {
 }
 .single.contact-info li .info {
     overflow: hidden;
+}
+/*Custom*/
+@media (max-width: 768px)
+{
+    #cards .card {
+        margin-top: 0 !important;
+    }
 }
