@@ -1,3 +1,73 @@
+/*General*/
+@media (max-width: 510px) {
+    #logo {
+        max-height:65px !important;
+    }
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-color: white;
+}
+.nav-link a {
+    text-decoration: none;
+    color: black;
+}
+#main a {
+    text-decoration: none;
+}
+.shadow {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+section {
+    margin-bottom: 125px;
+}
+#cards a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+.heading {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+@media (min-width: 576px) {
+    #robot {
+        margin-top: 120px;
+    }
+}
+@media (min-width: 769px) {
+    .card p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+@media (max-width: 991px) {
+    #cards .card {
+        height: 350px !important;
+    }
+    #cards .card h3 {
+        padding-top: 25% !important;
+    }
+}
+
+.hoverable .hover {
+    display: none;
+}
+.hoverable:hover .normal {
+    display: none;
+}
+.hoverable:hover .hover {
+    display: block;
+}
+/*Navbar*/
 .navbar-custom {
     background-color: rgba(255, 255, 255, 0.02);
     border-color: transparent;
@@ -68,76 +138,7 @@
         font-size: 1.5em;
     }
 }
-@media (max-width: 510px) {
-    #logo {
-        max-height:65px !important;
-    }
-}
-.center {
-    margin-left: auto;
-    margin-right: auto;
-}
-body {
-    background-color: white;
-}
-.nav-link a {
-    text-decoration: none;
-    color: black;
-}
-#main a {
-    text-decoration: none;
-}
-.shadow {
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-section {
-    margin-bottom: 125px;
-}
-#cards a {
-    text-decoration: none;
-}
-body {
-    font-family: 'Lato', sans-serif;
-}
-.heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: xx-large;
-}
-
-@media (min-width: 576px) {
-    #robot {
-        margin-top: 120px;
-    }
-}
-@media (min-width: 769px) {
-    .card p {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-}
-@media (max-width: 991px) {
-    #cards .card {
-        height: 350px !important;
-    }
-    #cards .card h3 {
-        padding-top: 25% !important;
-    }
-}
-
-.hoverable .hover {
-    display: none;
-}
-.hoverable:hover .normal {
-    display: none;
-}
-.hoverable:hover .hover {
-    display: block;
-}
-
-/* Console*/
+/*Console*/
 @media (max-width: 991px){
     .console {
         min-height:220px !important;
@@ -214,4 +215,46 @@ body {
     display: inline-block;
     margin-right: 20px;
     color: #8e8e8e;
+}
+/*Footer*/
+#footer-row {
+    display: table;
+    width: 100%;
+}
+#footer-row  > div:nth-of-type(1) > ul {
+    float: left;
+}
+#footer-row  > div:nth-of-type(2) > ul {
+    text-align: center !important;
+}
+#footer-row  > div:nth-of-type(3) > ul {
+    float: right;
+}
+.footer-col {
+    display: table-cell;
+    vertical-align: bottom;
+}
+@media (max-width: 768px) {
+    #footer-row {
+        display: block;
+        width: auto;
+    }
+    #footer-row  > div:nth-of-type(1) > ul {
+        text-align: center !important;
+        float: none;
+    }
+    #footer-row  > div:nth-of-type(2) > ul {
+        float: none;
+    }
+    #footer-row  > div:nth-of-type(3) > ul {
+        text-align: center !important;
+        float: none;
+    }
+    .footer-col {
+        display: block;
+        /*change col-4 to col-12*/
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

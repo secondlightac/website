@@ -2,7 +2,7 @@ baseURL = "https://static.it-for-kids.org/"
 languageCode = "de-de"
 title = "IT4Kids"
 
-copyright = "<span class=\"copyright\">Copyright &copy; 2018 IT4Kids</span>"
+copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(new Date().getFullYear())</script> IT4Kids</span>"
 
 [menu]
 

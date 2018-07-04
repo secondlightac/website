@@ -1,18 +1,24 @@
 <footer>
     <div class="container pt-5">
-        <div class="row">
-            <div class="col-4">
-                {{ .Site.Copyright | safeHTML }}
+        <div id="footer-row" class="row">
+            <div class="col-4 footer-col">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        {{ .Site.Copyright | safeHTML }}
+                    </li>
+                </ul>       
             </div>
-            <div class="col-4">
-                <ul class="list-inline social-buttons text-center">
-                    <li class="list-inline-item"><a href="{{ .Site.Params.facebook }}"><i class="fab fa-facebook-f"></i></a>
+            <div class="col-4 footer-col">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                        <a href="{{ .Site.Params.facebook }}"><i class="fab fa-facebook-f fa-2x"></i></a>
                     </li>
                 </ul>
             </div>
-            <div class="col-4">
-                <ul class="list-inline quicklinks" style="float:right">
-                    <li class="list-inline-item"><a href="{{ relref . `impressum.md` }}">Impressum</a>
+            <div class="col-4 footer-col">
+                <ul class="list-inline quicklinks">
+                    <li class="list-inline-item">
+                        <a href="{{ relref . `impressum.md` }}">Impressum</a>
                     </li>
                 </ul>
             </div>
