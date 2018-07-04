@@ -1,12 +1,16 @@
 {{ define "main" }}
 <div class="container">
     <div class="row mb-4">
-        <h3 class="center">{{.Title }}</h3>
+        <div class="col-12 text-center">
+            <h3 class="center">{{.Title }}</h3>
+        </div>  
     </div>
     {{ .Content }}
 
     <div class="row">
-        <h3 class="center">Leitung</h3>
+        <div class="col-12 text-center">
+            <h3 class="center">Leitung</h3>
+        </div>
     </div>
     <div class="row">
         {{ range where .Data.Pages "Params.leader" true }}
@@ -15,7 +19,9 @@
     </div>
     
     <div class="row">
-        <h3 class="center">Mitglieder</h3>
+        <div class="col-12 text-center">
+            <h3 class="center">Mitglieder</h3>
+        </div>
     </div>
     <div class="row">
         {{ range where .Data.Pages "Params.leader" false }}

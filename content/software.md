@@ -5,9 +5,11 @@ draft: false
 ---
 
 <div class="row">
-    <p>
-        Wir entwickeln derzeit eine eigene Software, da wir mit den bestehenden Alternativen nicht zufrieden waren. Gerade im Bereich grafischer Programmierung gibt es sehr gute Angebote <a href="https://scratch.mit.edu/" class="link">Scratch</a>, wir haben aber drei Punkte, mit denen wir unsere Software auf unsere Bedürfnisse im Unterricht anpassen wollen:
-    </p>
+    <div class="col-12">
+        <p>
+            Wir entwickeln derzeit eine eigene Software, da wir mit den bestehenden Alternativen nicht zufrieden waren. Gerade im Bereich grafischer Programmierung gibt es sehr gute Angebote <a href="https://scratch.mit.edu/" class="link">Scratch</a>, wir haben aber drei Punkte, mit denen wir unsere Software auf unsere Bedürfnisse im Unterricht anpassen wollen:
+        </p>
+    </div>
 </div>
 <div class="row">
     <div class="jumbotron" style="background-image:url({{< relURL "/img/software_one.jpg" >}});width:100%;height:350px;background-size: cover; background-position: center bottom"></div>

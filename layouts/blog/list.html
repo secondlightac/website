@@ -1,12 +1,16 @@
 {{ define "main" }}
 <div class="container">
     <div class="row mb-4">
-        <h3 class="center">{{.Title }}</h3>
+        <div class="col-12 text-center">
+            <h3 class="center">{{.Title }}</h3>
+        </div>
     </div>
     <div class="row">
-        <span class="center text-muted">
-            {{ .Content }}
-        </span>
+        <div class="col-12 text-center">
+            <span class="center text-muted">
+                {{ .Content }}
+            </span>
+        </div>
     </div>
 
     <div class="row">

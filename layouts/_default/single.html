@@ -1,13 +1,17 @@
 {{ define "main" }}
 <div class="container">
     <div class="row mb-4">
-        <h3 class="center{{ if .Params.titleClass }} {{ .Params.titleClass }}{{ end }}">{{.Title }}</h3>
+        <div class="col-12 text-center">
+            <h3 class="{{ if .Params.titleClass }} {{ .Params.titleClass }}{{ end }}">{{.Title }}</h3>
+        </div>
     </div>
     {{ if .Params.description }}
     <div class="row mb-5 pb-3">
-        <span class="center text-muted">
-            {{ .Params.description | safeHTML }}
-        </span>
+        <div class="col-12 text-center">
+            <span class="text-muted">
+                {{ .Params.description | safeHTML }}
+            </span>
+        </div>
     </div>
     {{ end }}
     {{ .Content }}
