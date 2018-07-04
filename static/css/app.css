@@ -11,6 +11,12 @@
 body {
     background-color: white;
 }
+a {
+    color: #1961ac;
+}
+a:hover {
+    color: #1f7adb;
+}
 .nav-link a {
     text-decoration: none;
     color: black;
@@ -36,6 +42,10 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: xx-large;
+}
+.btn {
+    background-color: #1961ac;
+    border-color: #1961ac;
 }
 
 @media (min-width: 576px) {
@@ -75,25 +85,25 @@ body {
     padding-left: 10%;
 }
 .navbar-custom .navbar-brand {
-    color: #0062bb;
+    color: #1961ac;
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus, .navbar-custom .navbar-brand:active, .navbar-custom .navbar-brand.active {
-    color: #00008B;
+    color: #1f7adb;
 }
 .navbar-custom .navbar-collapse {
     border-color: rgba(255, 255, 255, 0.02);
 }
 .navbar-custom .navbar-toggle {
-    background-color: #0062bb;
-    border-color: #0062bb;
+    background-color: #1961ac;
+    border-color: #1961ac;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: white;
     font-size: 12px;
 }
 .navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
-    background-color: #0062bb;
+    background-color: #1961ac;
 }
 .navbar-custom .nav li a {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -103,17 +113,17 @@ body {
     color: black;
 }
 .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
-    color: #0062bb;
+    color: #1f7adb;
     outline: none;
 }
 .navbar-custom .navbar-nav>.active>a {
     border-radius: 0;
     color: white;
-    background-color: #0062bb;
+    background-color: #1961ac;
 }
 .navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus {
     color: white;
-    background-color: #00008B;
+    background-color: #1f7adb;
 }
 @media (min-width: 768px) {
     .navbar-custom {
