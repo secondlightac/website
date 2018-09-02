@@ -1,6 +1,9 @@
+{{ $img := .Resources.GetMatch "image.*" }}
 <div class="col-md-4 col-sm-6 col-12 mb-5">
     <div class="card h-100">
-        <div style="height:150px;overflow:hidden"><img class="card-img-top" src="{{ .Params.image }}" alt="Post Image"></div>
+        {{ with $img }}
+        <div style="height:150px;overflow:hidden"><img class="card-img-top" src="{{ .RelPermalink }}" alt="Post Image"></div>
+        {{ end }}
         <div class="card-body">
             <h4 class="card-title">{{ .Title }}</h4>
             <p class="card-text">{{ truncate 100 .Content }}</p>

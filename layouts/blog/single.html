@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $img := .Page.Resources.GetMatch "image.*" }}
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-12">
@@ -8,10 +9,12 @@
             <div class="row text-muted" style="font-size:20px">{{ .Date.Format "02-01-2006" }}</div>
             <div class="row "><span> - {{ .Params.author }}</span></div>
         </div>
+        {{ with $img }}
         <div class="col-md-8 col-12">
-            <div class="jumbotron" style="width:100%; height:200px;background-image: url('{{ .Params.image }}');background-size:cover;background-repeat: no-repeat;background-position: center center">
+            <div class="jumbotron" style="width:100%; height:200px;background-image: url('{{ .RelPermalink }}');background-size:cover;background-repeat: no-repeat;background-position: center center">
             </div>
         </div>
+        {{ end }}
     </div>
 
     <div>{{ .Content }}</div>
