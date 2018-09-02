@@ -12,7 +12,7 @@
             <h3 class="center">Leitung</h3>
         </div>
     </div>
-    <div class="row">
+    <div class="row pb-5 pt-4">
         {{ range where .Data.Pages "Params.leader" true }}
             {{ partial "teamCard.html" . }}
         {{ end }}
@@ -23,7 +23,7 @@
             <h3 class="center">Mitglieder</h3>
         </div>
     </div>
-    <div class="row">
+    <div class="row pb-5 pt-4">
         {{ range where .Data.Pages "Params.leader" false }}
             {{ partial "teamCard.html" . }}
         {{ end }}
