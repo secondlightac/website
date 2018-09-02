@@ -3,7 +3,7 @@
 <div class="col-md-3 pb-3">
     <div class="card shadow h-100">
         {{ with $img }}
-            {{ $pic := .Fill "260x260 Top" }}
+            {{ $pic := .Fill "500x500 Top" }}
             <img class="card-img-top img-fluid" src="{{ $pic.RelPermalink }}" alt="Card Image">
         {{ end }}
         <div class="card-body text-center">
