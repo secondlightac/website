@@ -184,7 +184,8 @@ body {
     color: #8e8e8e;
 }
 .console li a {
-    color: #444;
+    text-decoration: underline;
+    color: #1f7adb;
 }
 .console li .cursor {
     width: 5px;
