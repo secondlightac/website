@@ -1,13 +1,13 @@
 {{ define "main" }}
-<section id="main">
+<section id="main" class="pb-0 mb-0 mb-sm-5 pb-sm-4">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-12 text-center" >
+            <div class="col-md-4 d-none d-md-block text-center">
                 <div class="row text-center">
                     <img src="{{ `/img/robot.gif` | relURL }}" style="height:150px;margin-left:auto;margin-right:auto;" id="robot">
                 </div>
             </div>
-            <div class="col-sm-8 col-12">
+            <div class="col-md-8 col-12">
                 <div>
                     <span style="font-size: 50px;line-height: 200%;opacity: 0.2;">❝</span>
                     <p style="margin-top:-40px;color:gray">
@@ -20,7 +20,7 @@
                 {{ partial "console.html" . }}
             </div>
         </div>
-        <div class="row" style="margin-top: 10px">
+        <div class="row d-none d-md-block" style="margin-top: 10px">
             <div class="col">
                 <p class="lead mb-3 mb-md-0">
                     IT4Kids bietet IT-Kurse für die 3. bis 6. Klasse, die Logik-
@@ -77,12 +77,12 @@
 {{ define "script" }}
 <script src="{{ `/js/typed.js` | relURL }}"></script>
 <script>
-var typed = new Typed('.main_text', { 
-    strings: ["IT4Kids ist ein dynamisches Team von Studenten aus unterschiedlichsten Fachrichtungen, welche sich zum Ziel gesetzt haben Informatik an deutsche Schulen zu bringen.", "Wir setzen darauf, bereits in Grundschulen Kurse einzurichten, um den Kindern ein grundlegendes Verständnis von Informatik zu ermöglichen."], 
-    typeSpeed: 30, 
-    backSpeed: 0, 
-    fadeOut: true, 
-    loop: true 
-}); 
+var typed = new Typed('.main_text', {
+    strings: ["IT4Kids ist ein dynamisches Team von Studenten aus unterschiedlichsten Fachrichtungen, welche sich zum Ziel gesetzt haben Informatik an deutsche Schulen zu bringen.", "Wir setzen darauf, bereits in Grundschulen Kurse einzurichten, um den Kindern ein grundlegendes Verständnis von Informatik zu ermöglichen."],
+    typeSpeed: 30,
+    backSpeed: 0,
+    fadeOut: true,
+    loop: true
+});
 </script>
 {{ end }}
