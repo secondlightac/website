@@ -1,9 +1,3 @@
-/*General*/
-@media (max-width: 510px) {
-    #logo {
-        max-height:65px !important;
-    }
-}
 .center {
     margin-left: auto;
     margin-right: auto;
