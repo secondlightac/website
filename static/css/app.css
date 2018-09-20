@@ -147,7 +147,7 @@ body {
 .navbar-toggler span {
     display: block;
     background-color: #444;
-    height: 2.5px;
+    height: 2px;
     width: 16px;
     margin-top: 4px;
     margin-bottom: 4px;
@@ -183,7 +183,7 @@ body {
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
-    margin-top: -22.5px;
+    margin-top: -22px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
