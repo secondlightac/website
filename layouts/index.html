@@ -7,15 +7,20 @@
                     <img src="{{ `/img/cubi-animated.gif` | relURL }}" style="height:150px;margin-left:auto;margin-right:auto;" id="robot">
                 </div>
             </div>
-            <div class="col-md-8 col-12">
-                <div>
-                    <span style="font-size: 50px;line-height: 200%;opacity: 0.2;">❝</span>
-                    <p style="margin-top:-40px;color:gray">
-                        <i>Everybody should learn how to <strong style="color:black">code</strong>, because it teaches you how to <strong style="color:black">think</strong>.
-                        <br>
-                        <span style="color:black;font-size: small;">- Steve Jobs</span>
-                        </i>
-                    </p>
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    <div class="p-1 col-2 d-md-none text-center">
+                            <img class="img-fluid" src="{{ `/img/cubi-animated.gif` | relURL }}" style="max-height: 50px;top:50%;position: relative" id="robotSmall">
+                    </div>
+                    <div class="pl-1 col-10 col-md-12">
+                        <span style="font-size: 50px;line-height: 200%;opacity: 0.2;">❝</span>
+                        <p style="margin-top:-40px;color:gray">
+                            <i>Everybody should learn how to <strong style="color:black">code</strong>, because it teaches you how to <strong style="color:black">think</strong>.
+                                <br>
+                                <span style="color:black;font-size: small;">- Steve Jobs</span>
+                            </i>
+                        </p>
+                    </div>
                 </div>
                 {{ partial "console.html" . }}
             </div>
