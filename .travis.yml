@@ -16,6 +16,6 @@ deploy:
   local_dir: public
   target-branch: gh-pages
   github_token: $GITHUB_TOKEN
-  fqdn: static.it-for-kids.org
+  fqdn: www.it-for-kids.org
   on:
     branch: master
