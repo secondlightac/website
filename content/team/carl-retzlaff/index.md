@@ -6,4 +6,4 @@ leader: true
 weight: 0
 ---
 
-Departmentleiter - Lehrkonzept
+Departmentleitung - Lehrkonzept

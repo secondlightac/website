@@ -6,4 +6,4 @@ leader: true
 weight: -10
 ---
 
-Departmentleiter - Software
+Departmentleitung - Software

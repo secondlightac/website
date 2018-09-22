@@ -7,4 +7,4 @@ email: "lucas.mosig@it-for-kids.org"
 weight: -100
 ---
 
-Projektleiter
+Projektleitung
