@@ -12,11 +12,14 @@ draft: false
     </div>
 </div>
 <div class="row">
-    <div class="jumbotron" style="background-image:url({{< relURL "/img/software_one.jpg" >}});width:100%;height:350px;background-size: cover; background-position: center bottom"></div>
+    <div class="d-lg-none jumbotron" style="background-image:url({{< relURL "/img/software_one.jpg" >}});width:100%;height:350px;background-size: cover; background-position: center bottom"></div>
+    <div id="softwareDemoContainer" class="d-none d-lg-block" style="background: #1961ac;width: 100%;max-height:600px">
+    <button id="loadDemoButton" type="button" class="btn btn-primary" style="position: relative;margin: 20px; left: 42%;width: 16%;height: 40px;color: white;border: white 1px solid;">Jetzt Demo laden!</button>
+    </div>
 </div>
 <div class="row pb-5 pt-5">
     <div class="col-md-6 col-12 mb-4 text-center">
-        <h3 class=" center">Integration von Lerninhalten</h3>
+        <h3 class="center">Integration von Lerninhalten</h3>
         <img src="{{< relURL "/img/icon-puzzle.svg" >}}" alt="" class="img img-fluid center mt-4" style="max-height:200px;">
     </div>
     <div class="col-md-6 col-12">
@@ -46,4 +49,16 @@ draft: false
             Sobald alle der obigen Funktionen implementiert sind planen wir ein umfangreiches Logging einzurichten. Das erlaubt es uns einerseits der Lehrperson individuelles Feedback zu geben, welcher Schüler derzeit Hilfe bei der vorliegenden Lektion benötigt, sowie größere (und anonymisierte) Datenanalyse, um einerseits unser Material zu verbessern und andererseits auf lange Sicht auch eine Empfehlung für die Leistungsbewertung abgeben zu können.
         </p>
     </div>
+</div>
+<div>
+<script>
+window.addEventListener('load', function() {
+    var softwareDemoContainer = $('#softwareDemoContainer');
+    var softwareDemoButton = $('#loadDemoButton');
+    softwareDemoButton.click(function() {
+        softwareDemoButton.remove()
+        softwareDemoContainer.append('<iframe id="softwareDemo" src="https://it4kids.github.io/blockster/" style="background: white; width: 100%;height: 600px;border: none;"></iframe>');
+    });
+})
+</script>
 </div>
