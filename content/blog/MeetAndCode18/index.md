@@ -4,7 +4,6 @@ date: 2018-03-03T20:00:00+00:00
 draft: false
 author: "Jannick Fiedler"
 ---
-<img src="image.png" style="padding-right: 10px"; align="left" alt="Meet and Code Poster" width=350>
 
 In unserem Scratch-Kurs am 13.10.2018 bieten wir Kindern im Alter von sechs bis zwölf Jahren die Gelegenheit, auf spielerische Weise das Thema Programmierung zu entdecken. Was ist überhaupt ein Computerprogramm? Wie sind die grundlegenden Funktionsweisen? Wie ist es aufgebaut? Bei uns lernen die Kinder, dass Programmieren keine Zauberei ist und jedes Kind nur ein paar Klicks von seinem eigenen Programm entfernt ist.
 
