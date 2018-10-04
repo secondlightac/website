@@ -1,6 +1,6 @@
 ---
 title: "Meet and Code 2018 - Jetzt teilnehmen!"
-date: 2018-03-03T20:00:00+00:00
+date: 2018-10-03T20:00:00+00:00
 draft: false
 author: "Jannick Fiedler"
 ---
