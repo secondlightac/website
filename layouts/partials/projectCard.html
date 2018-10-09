@@ -1,0 +1,25 @@
+{{ $img := .Resources.GetMatch "image.*" }}
+<div class="col-md-4 col-sm-6 col-12 mb-5">
+    <div class="card h-100">
+        {{ with $img }}
+            {{ $pic := .Fill "480x360 Bottom" }}
+            <img class="card-img-top img-fluid" src="{{ $pic.RelPermalink }}" alt="Card Image">
+        {{ end }}
+        <div class="card-body">
+            <h4 class="card-title">{{ .Title }}</h4>
+            <p class="card-text">{{ .Content }}</p>
+        </div>
+        <div class="card-footer">
+            <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projekt öffnen
+                </button>
+                <div class="dropdown-menu">
+                    {{ range .Params.links }}
+                        <a class="dropdown-item" target="_blank" href="{{ .url }}">{{ .name }}</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

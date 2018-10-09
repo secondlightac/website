@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h3 class="center">{{ .Title }}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>
+                {{ .Content }}
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        {{ range .Data.Pages.ByTitle  }}
+            {{ partial "projectCard.html" . }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}

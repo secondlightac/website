@@ -41,6 +41,11 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
     url = "/#mitmachen"
     weight = -40
 
+  [[menu.main]]
+    name = "Projekte"
+    url = "/project/"
+    weight = -30
+
 [params]
   facebook = "https://www.facebook.com/itforkids.org/"
   enactus = "https://enactus.de/aachen/"
