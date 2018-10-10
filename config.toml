@@ -43,7 +43,7 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
 
   [[menu.main]]
     name = "Projekte"
-    url = "/project/"
+    url = "/projekte/"
     weight = -30
 
 [params]
