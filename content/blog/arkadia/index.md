@@ -20,7 +20,7 @@ fünf IT4Kids Projektmitgliedern, 5 erfahrenen Beratern, Sushi und jeder Menge S
 In den Arkadia-Büroräumen am Rheinufer ging es nach einer Kennlernrunde und dem Abstecken von Erwartungen des Tages zu einem kurzen Pitch unserer Projektidee.
 Danach begann eine offene Gesprächsrunde, bei denen unser Businessplan, unsere Organisationsstruktur und unsere Kommunikationsketten unter die Lupe genommen wurden.
 Unter anderem waren die Akquise von neuen Kursbetreuern, die Expansion in andere Städte und unsere interne Rollenverteilung ein Thema.
-Die Jungs & Mädels von <a href="//arkadia.de">Arkadia</a> haben uns dabei durch die Diskussion geleitet und genau die Fragen gestellt, die richtig weh tun – danke dafür,
+Das Team von <a href="//arkadia.de">Arkadia</a> hat uns dabei durch die Diskussion geleitet und genau die Fragen gestellt, die richtig weh tun – danke dafür,
 denn nur so können wir unsere Fehler identifizieren und korrigieren.
 
 Zur Optimierung der internen Organisation wurde die Einführung eines CRM und besseres Feedback in der Zusammenarbeit mit Schulen geplant,
