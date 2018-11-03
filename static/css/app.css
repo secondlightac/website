@@ -384,3 +384,32 @@ aside.sidebar .single h3.side-title:after {
         margin-top: 0 !important;
     }
 }
+
+/* Used for iframes to the tutot signup sheet */
+.embed-responsive-custom {
+    padding-top: 70%;
+}
+@media (max-width: 1200px)
+{
+    .embed-responsive-custom {
+        padding-top: 90%;
+    }
+}
+@media (max-width: 992px)
+{
+    .embed-responsive-custom {
+        padding-top: 110%;
+    }
+}
+@media (max-width: 768px)
+{
+    .embed-responsive-custom {
+        padding-top: 150%;
+    }
+}
+@media (max-width: 551px)
+{
+    .embed-responsive-custom {
+        padding-top: 240%;
+    }
+}
