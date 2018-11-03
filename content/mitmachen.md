@@ -15,7 +15,7 @@ draft: false
     </div>
 </div>
 <div class="embed-responsive embed-responsive-custom"">
-<iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSeszq1FiRIn3tiGj-JmoUw0nZxA7n9ovYkpLgI6NNuKD9zHFA/viewform?embedded=true"
+<iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSeszq1FiRIn3tiGj-JmoUw0nZxA7n9ovYkpLgI6NNuKD9zHFA/viewform?embedded=true&hl=de"
  frameborder="0" marginheight="0" marginwidth="0">Wird geladen...</iframe>
 </div>
 </div>
