@@ -38,7 +38,7 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
 
   [[menu.main]]
     name = "Mitmachen"
-    url = "/#mitmachen"
+    url = "/mitmachen"
     weight = -40
 
   [[menu.main]]
