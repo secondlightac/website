@@ -2,16 +2,20 @@
 title: "Jetzt mitmachen!"
 date: 2018-06-30T04:09:46+02:00
 draft: false
+
+IMPORTANT COMMENT: "The titleClass below is used to hide it on mobile, take too much space."
+titleClass: "d-none d-md-block"
+IMPORTANT COMMENT: "The titleClass above is used to hide it on mobile, take too much space."
 ---
 
 <div class="row">
-    <div class="col-10 col-md-8 offset-1 offset-md-2">
+    <div class="col-12 col-md-8 offset-md-2">
         <p>
-        Mit einer Kursleiterstelle hilfst du Grundschulen in eine digitale Zukunft.<br>
-        Dafür zahlen wir dir eine Aufwandsentschädigung.
-        <br>
-        Fülle einfach die Anmeldung aus und wir melden uns bei dir!
-        </p>
+       Mit einer Kursleiterstelle hilfst du Grundschulen in eine digitale Zukunft.<br>
+       Du gibst an einer Schule eine Stunde pro Woche und kannst so vielen Kindern das IT und Programmierung näher bringen.<br>
+       Wir bereiten dich mit unserer Kursleiterschulung optimal auf diesen Kurs vor und unterstützen dich mit fertigen Projekten und einem Lehrkonzept.<br>
+       Fülle die Anmeldung aus und wir melden uns bei dir!
+       </p>
     </div>
 </div>
 <div class="embed-responsive embed-responsive-custom"">
