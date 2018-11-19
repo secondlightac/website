@@ -11,7 +11,7 @@ Wir waren natürlich mit einem Workshop im <a href="https://aachen.digital/">Dig
 
 Zuerst haben wir die Probleme an den jeweiligen Schulen besprochen, welche von der Ausstattung über fehlendes Personal bis hin zu fehlenden Kenntnissen im Kollegium reichten.
 Wir haben dann kurz unsere Lösung, bestehend aus Lehrkraft, Lehrmaterial und Lehrsoftware vorgestellt, bevor es ans Programmieren ging.
-Hierzu haben wir einige der <a href="www.it-for-kids.org/project">Einsteigerprojekte von unserer Website</a> durchgearbeitet,
+Hierzu haben wir einige der <a href="https://www.it-for-kids.org/projekte">Einsteigerprojekte von unserer Website</a> durchgearbeitet,
 was neben dem ein oder anderem <i>Software-Erfolgsmoment</i> vor allem zu jede Menge Spaß geführt hat.
 
 Die zwei Stunden waren wie im Flug vorbei und alle Teilnehmer waren sehr zufrieden.
