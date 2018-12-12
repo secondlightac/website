@@ -33,3 +33,5 @@ Alles in allem also ein richtig erfolgreiches Treffen!
 Nach dieser ersten Erfahrung freuen wir uns auf eine weitere Treffen und eine gute zukünftige Zusammenarbeit.
 Das Team von IT4Kids bedankt sich herzlich für die tatkräftige Unterstützung bei der Implementierung von digitaler Bildung an unseren Grundschulen.
 Durch Angebote wie die von <a href="//arkadia.de">Arkadia</a> können wir unser volles Potential erreichen und unsere Vision realisieren.
+
+Den Blogpost von Arkadia findet ihr <a href="https://arkadia.de/arkadia-foerdert-social-start-ups-aus-aachen/">hier</a>.
