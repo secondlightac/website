@@ -5,7 +5,7 @@ draft: false
 description: „Die Grundlagen der <span style="color:black;">Informatik</span> sollen durch uns <span style="color:black"> jedem Kind</span> zugänglich sein“
 titleClass: "heading"
 ---
-
+{{<infoVideo >}}
 <div class="row pb-5">
     <div class="col-md-6 col-12 order-md-2 mb-4 text-center">
         <img src="{{< relURL "/img/vision.jpg" >}}" alt="" class="img-fluid img shadow" style="max-height:300px; border-radius: 15px;padding:5px;">
