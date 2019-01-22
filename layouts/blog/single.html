@@ -3,10 +3,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-12">
-            <div class="row">
                 <h1 style="font-weight: 400;font-size:45px">{{ .Title }}</h1>
-            </div>
-            <div class="row text-muted" style="font-size:20px">{{ .Date.Format "02.01.2006" }} - {{ .Params.author }}</div>
+            <p class="text-muted" style="font-size:20px">{{ .Date.Format "02.01.2006" }} - {{ .Params.author }}</p>
         </div>
         {{ with $img }}
         <div class="col-md-8 col-12">
