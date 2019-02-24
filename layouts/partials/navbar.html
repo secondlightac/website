@@ -1,9 +1,11 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-default bg-light navbar-custom fixed-top">
     <a class="navbar-brand" href="/">
-        <img id="logo" alt="IT4Kids Logo" src="{{ `/img/logo.svg` | relURL }}" style="height:65px;padding:7.5px;"></img>
+        <img id="logo" alt="IT4Kids Logo" src="{{ `/img/logo.svg` | relURL }}"
+             style="height:65px;padding:7.5px;"></img>
     </a>
-    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button"
+            data-toggle="collapse" data-target="#collapsibleNavbar">
         <span> </span>
         <span> </span>
         <span> </span>
@@ -13,9 +15,24 @@
         <ul class="navbar-nav ml-auto text-center">
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#"
+                   role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    {{ .Name }}
+                </a>
+                <div class="dropdown-menu">
+                    {{ range .Children }}
+                    <a class="dropdown-item" href="{{ .URL }}">{{.Name}}</a>
+                    {{ end }}
+                </div>
+            </li>
+            {{ else }}
             <li class="nav-item {{if eq ($currentPage.Permalink | relURL) (.URL | safeHTML) }} active{{end}}">
                 <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
             </li>
+            {{ end }}
             {{ end }}
         </ul>
     </div>

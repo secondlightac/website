@@ -23,28 +23,45 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
 
   [[menu.main]]
     name = "Lehrmaterial"
-    url = "/lehrmaterial/"
     weight = -70
 
+ [[menu.main]]
+      name = "Projekte"
+      parent = "Lehrmaterial"
+      url = "/projekte/"
+
   [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
+      name = "Inhalte"
+      parent = "Lehrmaterial"
+      url = "/lehrmaterial/"
+
+  [[menu.main]]
+    name = "Kurse"
+    weight = -60
+
+  [[menu.main]]
+    name = "Kursleiter"
+    parent = "Kurse"
+    url = "/mitmachen/"
+
+  [[menu.main]]
+    name = "Schulen"
+    parent = "Kurse"
+    url = "/schulen/"
+
+  [[menu.main]]
+    name = "Wir"
     weight = -60
 
   [[menu.main]]
     name = "Team"
+    parent = "Wir"
     url = "/team/"
-    weight = -50
 
   [[menu.main]]
-    name = "Mitmachen"
-    url = "/mitmachen"
-    weight = -40
-
-  [[menu.main]]
-    name = "Projekte"
-    url = "/projekte/"
-    weight = -30
+    name = "Blog"
+    parent = "Wir"
+    url = "/blog/"
 
 [params]
   facebook = "https://www.facebook.com/itforkids.org/"
