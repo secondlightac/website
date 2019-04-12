@@ -36,18 +36,9 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
       url = "/lehrmaterial/"
 
   [[menu.main]]
-    name = "Kurse"
+    name = "Mitmachen"
     weight = -60
-
-  [[menu.main]]
-    name = "Kursleiter"
-    parent = "Kurse"
     url = "/mitmachen/"
-
-  [[menu.main]]
-    name = "Schulen"
-    parent = "Kurse"
-    url = "/schulen/"
 
   [[menu.main]]
     name = "Wir"
