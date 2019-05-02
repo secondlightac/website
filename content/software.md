@@ -7,7 +7,7 @@ draft: false
 <div class="row">
     <div class="col-12">
         <p>
-            Wir entwickeln derzeit eine eigene Software, da wir mit den bestehenden Alternativen nicht zufrieden waren. Gerade im Bereich grafischer Programmierung gibt es sehr gute Angebote <a href="https://scratch.mit.edu/" class="link">Scratch</a>, wir haben aber drei Punkte, mit denen wir unsere Software auf unsere Bedürfnisse im Unterricht anpassen wollen:
+            Wir entwickeln eine eigene Software, da bestehende Alternativen nicht auf das Lernen im Klassenverband ausgelegt sind.
         </p>
     </div>
 </div>
