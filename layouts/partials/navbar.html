@@ -24,7 +24,8 @@
                 </a>
                 <div class="dropdown-menu">
                     {{ range .Children }}
-                    <a class="dropdown-item" href="{{ .URL }}">{{.Name}}</a>
+                    <a class="dropdown-item d-none d-sm-block" href="{{ .URL }}">{{.Name}}</a>
+                    <a class="dropdown-item d-sm-none text-center" href="{{ .URL }}">{{.Name}}</a>
                     {{ end }}
                 </div>
             </li>
