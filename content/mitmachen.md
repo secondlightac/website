@@ -11,11 +11,13 @@ IMPORTANT COMMENT: "The titleClass above is used to hide it on mobile, take too 
 <div class="row">
     <div class="col-12 col-md-8 offset-md-2">
         <p>
-       Mit einer Kursleiterstelle hilfst du Grundschulen in eine digitale Zukunft.<br>
-       Du gibst an einer Schule eine Stunde pro Woche und kannst so vielen Kindern das IT und Programmierung näher bringen.<br>
-       Wir bereiten dich mit unserer Kursleiterschulung optimal auf diesen Kurs vor und unterstützen dich mit fertigen Projekten und einem Lehrkonzept.<br>
-       Fülle die Anmeldung aus und wir melden uns bei dir!
+       Mit einer Kursleiterstelle hilfst du Grundschulen in eine digitale Zukunft.
+       Du gibst an einer Schule eine Stunde pro Woche und kannst so vielen Kindern das IT und Programmierung näher bringen.
+       Wir bereiten dich mit unserer Kursleiterschulung optimal auf diesen Kurs vor und unterstützen dich mit fertigen Projekten und einem Lehrkonzept.
        </p>
+       <p class="font-weight-bold">
+              Neue Kurse starten immer zu den Schulhalbjahren (Anfang Februar und Anfang September), weswegen wir manchmal nicht direkt auf deine Bewerbung reagieren können.
+        </p>
     </div>
 </div>
 <div class="embed-responsive embed-responsive-custom"">
