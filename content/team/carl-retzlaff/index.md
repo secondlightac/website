@@ -7,4 +7,4 @@ leader: true
 weight: 0
 ---
 
-Departmentleitung - Lehrkonzept
+Stellvertretende Leitung - Lehrkonzept

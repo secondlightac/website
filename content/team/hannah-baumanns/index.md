@@ -7,4 +7,4 @@ leader: false
 weight: 100
 ---
 
-Organsisation
+Kursorganisation

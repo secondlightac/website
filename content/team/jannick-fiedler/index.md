@@ -8,4 +8,4 @@ email: "jannick.fiedler@it-for-kids.org"
 weight: 100
 ---
 
-Organsisation
+Kursorganisation
