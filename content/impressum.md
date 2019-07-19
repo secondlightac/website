@@ -15,8 +15,8 @@ VR 5449 \
 
 **Bei weiteren Fragen oder Problemen steht Ihnen gerne unserer vertretungsberechtigter Vorstand als Kontakt zur Verfügung:**
 
-Externe Teamleitung: [Nina Schillings](mailto:nina-felizitas.schillings@aachen.enactus.de) \
-Interne Teamleitung: [Lars Braun](mailto:lars.braun@aachen.enactus.de)
+Externe Teamleitung: [Philipp Steiz](mailto:teamleitung@aachen.enactus.de) \
+Interne Teamleitung: [Madlen Merklinger](mailto:teamleitung@aachen.enactus.de)
 
 **Oder wenden Sie sich an unseren Führungskreis:**
 
