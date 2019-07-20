@@ -1,0 +1,19 @@
+
+{{ $img := .Resources.GetMatch "*.png" }}
+<div class="col-md-4 pl-4 pr-4 pb-4">
+    <div class="card shadow h-100">
+        {{ with $img }}
+            {{ $pic := .Fill "500x500 Top" }}
+            <img class="card-img-top img-fluid" src="{{ $pic.RelPermalink }}" alt="Card Image">
+        {{ end }}
+        <div class="card-body text-center">
+            <h4 class="card-title center">{{ .Title }}</h4>
+            <p class="card-text">{{ .Content }}</p>
+            {{ if (isset .Params "email") }}
+            <span data-toggle="tooltip" title="{{ .Params.email }}">
+                <a href="mailto:{{ .Params.email }}"><i class="fas fa-envelope" style="color:gray;" aria-hidden="true"></i></a>
+            </span>
+            {{ end }}
+        </div>
+    </div>
+</div>
