@@ -1,5 +1,5 @@
 
-{{ $img := .Resources.GetMatch "*.png" }}
+{{ $img := .Resources.GetMatch "picture.*" }}
 <div class="col-md-4 pl-4 pr-4 pb-4">
     <div class="card shadow h-100">
         {{ with $img }}
