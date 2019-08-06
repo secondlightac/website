@@ -16,7 +16,7 @@ IMPORTANT COMMENT: "The titleClass above is used to hide it on mobile, take too 
        Wir bereiten dich mit unserer Kursleiterschulung optimal auf diesen Kurs vor und unterstützen dich mit fertigen Projekten und einem Lehrkonzept.
        </p>
        <p class="font-weight-bold">
-              Neue Kurse starten immer zu den Schulhalbjahren (Anfang Februar und Anfang September), weswegen wir manchmal nicht direkt auf deine Bewerbung reagieren können.
+              Neue Kurse starten immer zu den Schulhalbjahren, weswegen wir manchmal nicht direkt auf deine Bewerbung reagieren können.
         </p>
     </div>
 </div>
