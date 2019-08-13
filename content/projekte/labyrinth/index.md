@@ -8,5 +8,4 @@ links:
   - name: Lösung
     url: https://scratch.mit.edu/projects/284487741/
 ---
-e
 Programmiere die Maus so, dass sie durch das Labyrinth den Weg zuerst zum Schlüssel und dann zum Tor findet.
