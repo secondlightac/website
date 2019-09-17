@@ -3,7 +3,9 @@ title: "Finde das Tier!"
 date: 2018-06-22T19:09:16+02:00
 draft: false
 links:
-  - name: Lösung
+  - name: Cubi Lösung
+    url: https://editor.it-for-kids.org/?level=level/Loesungen/FindeDasTier.cubi
+  - name: Scratch Lösung
     url: https://scratch.mit.edu/projects/45201300/
 ---
 

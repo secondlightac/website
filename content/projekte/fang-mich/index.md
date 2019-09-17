@@ -3,9 +3,11 @@ title: "Fang mich!"
 date: 2018-06-22T19:09:16+02:00
 draft: false
 links:
-  - name: Vorlage
+  - name: Cubi Lösung
+    url: https://editor.it-for-kids.org/?level=level/Loesungen/FangMich.cubi
+  - name: Scratch Vorlage
     url: https://scratch.mit.edu/projects/113881635/
-  - name: Lösung
+  - name: Scratch Lösung
     url: https://scratch.mit.edu/projects/55902194/
 ---
 
