@@ -12,7 +12,7 @@ titleClass: "heading"
             Wir sind eine Gruppe von Studenten, die im Rahmen von <a href="http://aachen.enactus.de/" class="link">Enactus Aachen</a> das Projekt IT4Kids gestartet haben. Einige von uns programmieren selbst schon seit jungen Jahren, während andere diese Chance bis ins Studium nicht hatten. Um diesen Missstand zu beheben, haben wir uns zusammengetan.
         </p>
         <p>
-            Informatik wird an deutschen Schulen in der Regel frühestens ab der Mittelstufe (Klasse 7) gelehrt. Früher gibt es wenige Angebote und der „PC-Unterricht“ an Schulen ist oft auf das Bedienen des Rechners und Standardanwengungen (Office, Bildbearbeitung) beschränkt.
+            Informatik wird an deutschen Schulen in der Regel frühestens ab der Mittelstufe (Klasse 7) gelehrt. Früher gibt es wenige Angebote und der „PC-Unterricht“ an Schulen ist oft auf das Bedienen des Rechners und Standardanwendungen (Office, Bildbearbeitung) beschränkt.
         </p>
     </div>
     <div class="col-md-6 col-12 order-md-2 mb-4 text-center">
