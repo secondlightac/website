@@ -12,7 +12,7 @@ IMPORTANT COMMENT: "The titleClass above is used to hide it on mobile, take too 
     <div class="col-12 col-md-8 offset-md-2">
         <p>
        Mit einer Kursleiterstelle hilfst du Grundschulen in eine digitale Zukunft.
-       Du gibst an einer Schule einen IT-Kurs und kannst so vielen Kindern das IT und Programmierung näher bringen.
+       Du gibst an einer Schule einen IT-Kurs und kannst so vielen Kindern IT und Programmierung näher bringen.
        Wir bereiten dich mit unserer Kursleiterschulung optimal auf diesen Kurs vor und unterstützen dich mit fertigen Projekten und einem Lehrkonzept.
        </p>
        <p class="font-weight-bold">
