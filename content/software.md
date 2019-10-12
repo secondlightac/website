@@ -7,7 +7,7 @@ draft: false
 <div class="row">
     <div class="col-12">
         <p>
-            Wir entwickeln eine eigene Software, da bestehende Alternativen nicht auf das Lernen im Klassenverband ausgelegt sind.
+            Wir entwickeln eine eigene Software, weil bestehende Alternativen nicht auf das Lernen im Klassenverband ausgelegt sind.
         </p>
     </div>
 </div>
@@ -24,7 +24,7 @@ draft: false
     </div>
     <div class="col-md-6 col-12">
         <p>
-            Wir planen die Lerninhalte der Stunden so eng wie möglich mit der Software zu verzahnen. So können die Aufgabenstellungen direkt in der Programmieroberfläche eingebettet werden und Hilfestellungen sind auch immer nur einen Klick entfernt. Des Weiteren planen wir eine fähigkeitsbasierte Progression (mehr dazu auf der Seite <a href="{{< relref "lehrmaterial.md" >}}" class="link">Lehrmaterial</a>), welche es erfordert, dass Inhalte automatisch in einer spezifischen Sequenz aufeinander folgen.
+            Wir planen, die Lerninhalte der Stunden so eng wie möglich mit der Software zu verzahnen. So können die Aufgabenstellungen direkt in der Programmieroberfläche eingebettet werden und Hilfestellungen sind nur einen Klick entfernt. Des Weiteren planen wir eine fähigkeitsbasierte Progression (mehr dazu auf der Seite <a href="{{< relref "lehrmaterial.md" >}}" class="link">Lehrmaterial</a>), welche es erfordert, dass Inhalte automatisch in einer spezifischen Sequenz aufeinander folgen.
         </p>
     </div>
 </div>
@@ -35,7 +35,7 @@ draft: false
     </div>
     <div class="col-md-6 order-md-1 col-12">
         <p>
-            Um die Lerninhalte gezielt und für alle Schulen anpassen zu können planen wir eine zentrale Speicherung. Auf diese Weise kann einerseits das Curriculum jederzeit angepasst werden, und andererseits für jedes Kind ein individueller Speicherstand angelegt werden. Dieser ist dann auch unabhängig von der Schulinfrastruktur und kann von überall angerufen werden.
+            Um die Lerninhalte gezielt und für alle Schulen anpassen zu können, planen wir eine zentrale Speicherung. Auf diese Weise kann einerseits das Curriculum jederzeit angepasst werden, und andererseits für jedes Kind ein individueller Speicherstand angelegt werden. Dieser ist unabhängig von der Schulinfrastruktur und kann von überall aufgerufen werden.
         </p>
     </div>
 </div>
@@ -46,7 +46,7 @@ draft: false
     </div>
     <div class="col-md-6 col-12">
         <p>
-            Sobald alle der obigen Funktionen implementiert sind planen wir ein umfangreiches Logging einzurichten. Das erlaubt es uns einerseits der Lehrperson individuelles Feedback zu geben, welcher Schüler derzeit Hilfe bei der vorliegenden Lektion benötigt, sowie größere (und anonymisierte) Datenanalyse, um einerseits unser Material zu verbessern und andererseits auf lange Sicht auch eine Empfehlung für die Leistungsbewertung abgeben zu können.
+            Sobald alle der obigen Funktionen implementiert sind, planen wir ein umfangreiches Logging einzurichten. Das erlaubt es uns, einerseits der Lehrperson individuelles Feedback zu geben, welcher Schüler derzeit Hilfe bei der vorliegenden Lektion benötigt, andererseits eine größere (und anonymisierte) Datenanalyse zur Verbesserung des Lehrmaterials und langfristig für die Abgabe einer Empfehlung der Leistungsbewertung durchzuführen.
         </p>
     </div>
 </div>
