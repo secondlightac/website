@@ -41,7 +41,7 @@ titleClass: "heading"
             Wir haben nicht das Ziel, allen Kindern Programmieren beizubringen. Wir versprechen nicht, dass ein Kind nach einem unserer Kurse Code schreiben kann. Was wir aber versuchen, ist, dass jedes Kind nach dem Kurs ein Gefühl dafür bekommt, was Programmieren bedeutet. Auf diese Weise ermöglichen wir ganz neue Perspektiven gerade im Bezug auf logisches Denken und Problemlösung. Und nicht zuletzt möchten wir den Kindern auch zeigen, dass Programmieren und Technologie viel Spaß machen.
         </p>
         <p>
-            Um auf dem neusten Stand zu bleiben, empfehlen wir auch unseren <a href="/blog/" class="link">Blog</a>. Soltten wir Ihr Interesse geweckt haben, nehmen Sie gerne <a href="/#mitmachen">Kontakt</a> zu uns auf.
+            Um auf dem neusten Stand zu bleiben, empfehlen wir auch unseren <a href="/blog/" class="link">Blog</a>. Sollten wir Ihr Interesse geweckt haben, nehmen Sie gerne <a href="/#mitmachen">Kontakt</a> zu uns auf.
         </p>
     </div>
     <div class="col-md-6 col-12 order-md-2 mb-4 text-center">
