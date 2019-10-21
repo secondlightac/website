@@ -13,7 +13,7 @@ IMPORTANT COMMENT: "The titleClass above is used to hide it on mobile, take too 
         <p>
        Mit einer Kursleiterstelle hilfst du Grundschulen in eine digitale Zukunft.
        Du gibst an einer Schule einen IT-Kurs und kannst so vielen Kindern IT und Programmierung näher bringen.
-       Wir bereiten dich mit unserer Kursleiterschulung optimal auf diesen Kurs vor und unterstützen dich mit fertigen Projekten und einem Lehrkonzept.
+       Wir bereiten dich mit unserer Kursleiterschulung optimal auf diesen Kurs vor und unterstützen dich mit Projekten und einem Lehrkonzept.
        </p>
        <p class="font-weight-bold">
               Neue Kurse starten immer zu den Schulhalbjahren, weswegen wir manchmal nicht direkt auf deine Bewerbung reagieren können.
