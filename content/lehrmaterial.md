@@ -10,7 +10,7 @@ draft: false
     </div>
     <div class="col-md-6 col-12">
         <p>
-            Auch wenn Programmieren gar nicht so schwer ist, wie man allgemein schnell denkt, braucht es trotzdem ein Konzept, wie die Kinder sinnvoll an das Thema herangeführt werden können. Wir verfolgen mit unserem Material zwei Ziele: einerseits, dass die Kinder spielerisch damit interagieren können, und andererseits, dass wichtige Grundkonzepte der Programmierung behandelt werden.
+            Um die Kinder schrittweise, verständlich und auf spielerische Weise an das Thema Programmieren heranzuführen, benötigt es ein umfassendes Konzept. Wir haben ein Lehrkonzept mit umfangreichen Lernmaterialien entwickelt, mit dem wir zwei zentrale Ziele verfolgen: Zum einen können die Kinder mit der Benutzeroberfläche der Lernsoftware spielerisch interagieren und zum anderen werden wichtige Grundkonzepte des Programmierens behandelt.  
         </p>
     </div>
 </div>
@@ -20,10 +20,10 @@ draft: false
     </div>
     <div class="col-md-6 col-12 order-md-1">
         <p>
-            Um frustfreien Fortschritt zu ermöglichen, sind unsere Lektionen in „Level“ unterteilt. Ähnlich zu Videospielen muss immer erst das aktuelle Level beendet werden, bevor das nächste beginnen kann. Auf diese Weise können wir nach und nach neue Inhalte, Funktionen und Konzepte dazu nehmen, ohne direkt mit zu vielen Neuerungen zu überfordern.
+            Um einen an jedes Kind angepassten Lernfortschritt zu ermöglichen, sind unsere Lektionen in „Level“ unterteilt. Ähnlich zu Videospielen muss immer erst das aktuelle Level beendet werden, bevor mit dem nächsten begonnen werden kann. Auf diese Weise können wir nach und nach neue Inhalte, Funktionen und Konzepte dazu nehmen, ohne direkt mit zu vielen Neuerungen zu überfordern.
         </p>
         <p>
-            Um den Tutor oder Lehrer, der den Kurs durchführt, optimal vorzubereiten, erstellen wir ein Handbuch, das Kapitel für Kapitel alle Level erläutert und eine Vorbereitung auf die Unterrichtseinheit ermöglicht.
+            Der Tutor oder der Lehrer, der den Kurs durchführt, erhält von uns ein Handbuch, das Kapitel für Kapitel alle Level erläutert und so eine optimale Vorbereitung auf die Unterrichtseinheit garantiert.
         </p>
     </div>
 </div>
