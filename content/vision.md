@@ -35,10 +35,10 @@ titleClass: "heading"
             Neben der Kursorganisation umfasst IT4Kids noch zwei weitere Komponenten: Die Entwicklung von <a href="{{< relref "lehrmaterial.md" >}}" class="link">Lehrmaterial</a> und <a href="{{< relref "software.md" >}}" class="link">Lernsoftware </a>. Mithilfe unseres Angebots ermöglichen wir eine einfache Durchführung des Unterrichts und eine optimale Lernerfahrung der Kinder.
         </p>
         <p>
-            Unser Ziel ist es, Kindern ein Gefühl für Programmieren zu vermitteln und hierdurch das logische Denken und strukturierte Lösen von Problemstellungen zu fördern. Wir zeigen den Kindern, was sich hinter einem Programm verbrigt und möchten so auf spielerische Weise das Interesse und den Spaß am Programmieren wecken.
+            Unser Ziel ist es, Kindern ein Gefühl für Programmieren zu vermitteln und hierdurch das logische Denken und strukturierte Lösen von Problemstellungen zu fördern. Wir zeigen den Kindern, was sich hinter einem Programm verbirgt und möchten so auf spielerische Weise das Interesse und den Spaß am Programmieren wecken.
         </p>
         <p>
-           Sie möchten gerne mehr über uns und unsere Projekte erfahren? Dann besuchen Sie doch gerne unseren <a href="/blog/" class="link">Blog</a>. Sollten wir Ihr Interesse geweckt haben, freuen wir uns sehr über ihre Nachricht über unser <a href="/#mitmachen">Kontaktformular</a>.
+           Sie möchten gerne mehr über uns und unsere Projekte erfahren? Dann besuchen Sie doch gerne unseren <a href="/blog/" class="link">Blog</a>. Sollten wir Ihr Interesse geweckt haben, freuen wir uns sehr über Ihre Nachricht über unser <a href="/#mitmachen">Kontaktformular</a>.
         </p>
     </div>
     <div class="col-md-6 col-12 order-md-2 mb-4 text-center">
