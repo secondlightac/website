@@ -9,7 +9,7 @@ titleClass: "heading"
 <div class="row pb-5">
     <div class="col-md-6 col-12 order-md-1">
         <p>
-            Wir sind eine Gruppe von Studenten, die im Rahmen von <a href="http://aachen.enactus.de/" class="link">Enactus Aachen</a> das Projekt IT4Kids gestartet haben. Einige von uns programmieren selbst schon seit jungen Jahren, während andere diese Chance bis ins Studium nicht hatten. Um diesen Missstand zu beheben, haben wir uns zusammengetan.
+            IT4Kids, das ist eine Gruppe von Studierenden, die im Rahmen von <a href="http://aachen.enactus.de/" class="link">Enactus Aachen</a> ein Projekt gestartet haben mit dem Ziel, Kindern bereits in jungen Jahren den Zugang zur Informatik und dem Programmieren zu ermöglichen. 
         </p>
         <p>
             Informatik wird an deutschen Schulen in der Regel frühestens ab der Mittelstufe (Klasse 7) gelehrt. Früher gibt es wenige Angebote und der „PC-Unterricht“ an Schulen ist oft auf das Bedienen des Rechners und Standardanwendungen (Office, Bildbearbeitung) beschränkt.
@@ -22,10 +22,7 @@ titleClass: "heading"
 <div class="row pb-5">
     <div class="col-md-6 col-12 order-md-2">
         <p>
-            Die naheliegendste Lösung ist es, mit Schulen zu kooperieren, sodass diese Programmierung in den Unterricht aufnehmen oder als AG anbieten können. Dieses Angebot bieten wir auch, allerdings werden laut einer Studie bis 2025 35.000 Lehrer fehlen <a href="https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2018/januar/lehrermangel-in-grundschulen-verschaerft-sich/" class="link">Bertelsmann Stiftung, 2018</a>. Dieser Personalmangel macht es für viele Schulen schwierig, eigene Angebote zu entwickeln oder anzubieten.
-        </p>
-        <p>
-            Um das Problem des fehlenden Tutors zu lösen, bieten wir Schulen an, einen Tutor zu organisieren. Dieser ist in der Regel ein Student, den wir anwerben, prüfen und mit Material ausstatten, um den Kurs an der Schule selbstständig durchzuführen. Dies ermöglicht es, dass auch Kinder an Schulen mit fehlendem (Fach-)Personal an einem Informatikkurs teilnehmen können.
+            Wir arbeiten mit den Schulen als Kooperationspartner zusammen und ermöglichen, Programieren im Unterricht zu integrieren oder als AG im Nachmittagsbereich den Kindern anzubieten. Neben dem Unterrichtskonzept mit Lehrsoftware und Lehrmaterialien organisieren und bilden wir Tutoren aus, die den IT4Kids Kurs selbständig durchführen. Durch dieses Angebot wirken wir dem Personalmangel an deutschen Schulen entgegen, der sich nach einer Studie bis 2025 auf 35.000 fehlende Lehrkräfte entwickeln wird <a href="https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2018/januar/lehrermangel-in-grundschulen-verschaerft-sich/" class="link">Bertelsmann Stiftung, 2018</a>. 
         </p>
     </div>
     <div class="col-md-6 col-12 mb-4 text-center">
