@@ -46,7 +46,7 @@ draft: false
     </div>
     <div class="col-md-6 col-12">
         <p>
-            Die dritte zentrale Komponente unserer Software bildet die Learning Analytics. Hierdurch wird der Lehrperson ermöglicht, den individuellen Lernerfolgsstand jeden Kursteilnehmers zu verfolgen und gegebenenfalls bei der Bearbeitung der vorliegenenden Lektion Hilfestellung zu geben. Des Weiteren erlaubt uns die anonymisierte Datenanalyse, unser Lehrmaterial zielgenau zu verbessern und langfristig die Abgabe einer Empfehlung der Leistungsbewertung durchzuführen.
+            Die dritte zentrale Komponente unserer Software bildet die Learning Analytics. Hierdurch wird der Lehrperson ermöglicht, den individuellen Lernerfolgsstand jeden Kursteilnehmers zu verfolgen und gegebenenfalls bei der Bearbeitung der vorliegenenden Lektion Hilfestellung zu geben. Des Weiteren erlaubt uns die anonymisierte Datenanalyse, unser Lehrmaterial zielgenau zu verbessern und langfristig eine Empfehlung der Leistungsbewertung abzugeben.
         </p>
     </div>
 </div>
