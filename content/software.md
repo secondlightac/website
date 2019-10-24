@@ -35,7 +35,7 @@ draft: false
     </div>
     <div class="col-md-6 order-md-1 col-12">
         <p>
-            Um die Lerninhalte gezielt und für alle Schulen gleichzeitig anpassen zu können, planen wir eine zentrale Speicherung der Daten. Diese ermöglicht jederzeit eine einfache und schnelle Anpassung des Curriculms. Des Weiteren kann für jedes Kind ein individueller Speicherstand angelegt werden. Die Cloudspeicherung ermöglicht zudem eine von der Schulinfrastruktur unabhängige Nutzung unserer Lernsoftware, die standortunabhängig aufgerufen werden kann.
+            Um die Lerninhalte gezielt und für alle Schulen gleichzeitig anpassen zu können, planen wir eine zentrale Speicherung der Daten. Diese ermöglicht jederzeit eine einfache und schnelle Anpassung des Curriculums. Des Weiteren kann für jedes Kind ein individueller Speicherstand angelegt werden. Die Cloudspeicherung ermöglicht zudem eine von der Schulinfrastruktur unabhängige Nutzung unserer Lernsoftware, die standortunabhängig aufgerufen werden kann.
         </p>
     </div>
 </div>
@@ -46,7 +46,7 @@ draft: false
     </div>
     <div class="col-md-6 col-12">
         <p>
-            Die dritte zentrale Komponente unserer Software bildet die Learning Analytics. Hierdurch wird der Lehrperson ermöglicht, den individuellen Lernerfolgsstand jeden Kursteilnehmers zu verfolgen und gegebenenfalls bei der Bearbeitung der vorliegenenden Lektion Hilfestellung zu geben. Des Weiteren erlaubt uns die anonymisierte Datenanalyse, unser Lehrmaterial zielgenau zu verbessern und langfristig eine Empfehlung der Leistungsbewertung abzugeben.
+            Die dritte zentrale Komponente unserer Software bildet die Learning Analytics. Hierdurch wird der Lehrperson ermöglicht, den individuellen Lernerfolgsstand jeden Kursteilnehmers zu verfolgen und gegebenenfalls bei der Bearbeitung der vorliegenden Lektion Hilfestellung zu geben. Des Weiteren erlaubt uns die anonymisierte Datenanalyse, unser Lehrmaterial zielgenau zu verbessern und langfristig eine Empfehlung der Leistungsbewertung abzugeben.
         </p>
     </div>
 </div>
