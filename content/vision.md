@@ -22,7 +22,7 @@ titleClass: "heading"
 <div class="row pb-5">
     <div class="col-md-6 col-12 order-md-2">
         <p>
-            Wir arbeiten mit den Schulen als Kooperationspartner zusammen und ermöglichen, Programieren im Unterricht zu integrieren oder als AG im Nachmittagsbereich den Kindern anzubieten. Neben dem Unterrichtskonzept mit Lehrsoftware und Lehrmaterialien organisieren und bilden wir Tutoren aus, die den IT4Kids Kurs selbständig durchführen. Durch dieses Angebot wirken wir dem Personalmangel an deutschen Schulen entgegen, der sich nach einer Studie bis 2025 auf 35.000 fehlende Lehrkräfte entwickeln wird <a href="https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2018/januar/lehrermangel-in-grundschulen-verschaerft-sich/" class="link">Bertelsmann Stiftung, 2018</a>. 
+            Wir arbeiten mit den Schulen als Kooperationspartner zusammen und ermöglichen, Programmieren im Unterricht zu integrieren oder als AG im Nachmittagsbereich den Kindern anzubieten. Neben dem Unterrichtskonzept mit Lehrsoftware und Lehrmaterialien organisieren und bilden wir Tutoren aus, die den IT4Kids Kurs selbstständig durchführen. Durch dieses Angebot wirken wir dem Personalmangel an deutschen Schulen entgegen, der sich nach einer Studie bis 2025 auf 35.000 fehlende Lehrkräfte entwickeln wird <a href="https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2018/januar/lehrermangel-in-grundschulen-verschaerft-sich/" class="link">Bertelsmann Stiftung, 2018</a>. 
         </p>
     </div>
     <div class="col-md-6 col-12 mb-4 text-center">
