@@ -6,6 +6,6 @@ draft: false
 author: "IT4Kids"
 kidsCount: 1200
 customerCount: 25
-stateCount: 3
+stateCount: 2
 tutorCount: 40
 ---

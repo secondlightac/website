@@ -10,6 +10,6 @@ ogsCustomerCount: 25
 regularCustomerCount: 2
 licensedCustomerCount: 1
 eventCustomerCount: 3
-stateCount: 3
+stateCount: 2
 tutorCount: 21
 ---
