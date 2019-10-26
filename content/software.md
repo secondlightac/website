@@ -7,7 +7,7 @@ draft: false
 <div class="row">
     <div class="col-12">
         <p>
-            Wir entwickeln eine eigene Software, da bestehende Alternativen nicht auf das Lernen im Klassenverband ausgelegt sind.
+            Weil bestehende Alternativen nicht auf das Lernen im Klassenverband ausgelegt sind, haben wir uns entschlossen, eine eigene Lernsoftware zu entwickeln und anzubieten!
         </p>
     </div>
 </div>
@@ -24,7 +24,7 @@ draft: false
     </div>
     <div class="col-md-6 col-12">
         <p>
-            Wir planen die Lerninhalte der Stunden so eng wie möglich mit der Software zu verzahnen. So können die Aufgabenstellungen direkt in der Programmieroberfläche eingebettet werden und Hilfestellungen sind auch immer nur einen Klick entfernt. Des Weiteren planen wir eine fähigkeitsbasierte Progression (mehr dazu auf der Seite <a href="{{< relref "lehrmaterial.md" >}}" class="link">Lehrmaterial</a>), welche es erfordert, dass Inhalte automatisch in einer spezifischen Sequenz aufeinander folgen.
+            Wir planen, die Lerninhalte der Kursstunden so eng wie möglich mit der Software zu verzahnen. Dies ermöglicht das direkte Einbetten der Aufgabenstellung in der Programmieroberfläche und eine Integration von Hilfestellungen, die zum jeweiligen Thema passgenau abgerufen werden können. Zusätzlich orientiert sich die Software auf einer fähigkeitsbasierte Progression (mehr dazu auf der Seite <a href="{{< relref "lehrmaterial.md" >}}" class="link">Lehrmaterial</a>), wodurch die Inhalte automatisch in einer spezifischen Sequenz aufeinanderfolgen.
         </p>
     </div>
 </div>
@@ -35,18 +35,18 @@ draft: false
     </div>
     <div class="col-md-6 order-md-1 col-12">
         <p>
-            Um die Lerninhalte gezielt und für alle Schulen anpassen zu können planen wir eine zentrale Speicherung. Auf diese Weise kann einerseits das Curriculum jederzeit angepasst werden, und andererseits für jedes Kind ein individueller Speicherstand angelegt werden. Dieser ist dann auch unabhängig von der Schulinfrastruktur und kann von überall angerufen werden.
+            Um die Lerninhalte gezielt und für alle Schulen gleichzeitig anpassen zu können, planen wir eine zentrale Speicherung der Daten. Diese ermöglicht jederzeit eine einfache und schnelle Anpassung des Curriculums. Des Weiteren kann für jedes Kind ein individueller Speicherstand angelegt werden. Die Cloudspeicherung ermöglicht zudem eine von der Schulinfrastruktur unabhängige Nutzung unserer Lernsoftware, die standortunabhängig aufgerufen werden kann.
         </p>
     </div>
 </div>
 <div class="row pb-5 pt-5">
     <div class="col-md-6 col-12 mb-4 text-center">
-        <h3 class="center">Learning analytics</h3>
+        <h3 class="center">Learning Analytics</h3>
         <img src="{{< relURL "/img/icon-analyse.svg" >}}" alt="" class="img img-fluid center mt-4" style="max-height:200px;">
     </div>
     <div class="col-md-6 col-12">
         <p>
-            Sobald alle der obigen Funktionen implementiert sind planen wir ein umfangreiches Logging einzurichten. Das erlaubt es uns einerseits der Lehrperson individuelles Feedback zu geben, welcher Schüler derzeit Hilfe bei der vorliegenden Lektion benötigt, sowie größere (und anonymisierte) Datenanalyse, um einerseits unser Material zu verbessern und andererseits auf lange Sicht auch eine Empfehlung für die Leistungsbewertung abgeben zu können.
+            Die dritte zentrale Komponente unserer Software bildet die Learning Analytics. Hierdurch wird der Lehrperson ermöglicht, den individuellen Lernerfolgsstand jeden Kursteilnehmers zu verfolgen und gegebenenfalls bei der Bearbeitung der vorliegenden Lektion Hilfestellung zu geben. Des Weiteren erlaubt uns die anonymisierte Datenanalyse, unser Lehrmaterial zielgenau zu verbessern und langfristig eine Empfehlung der Leistungsbewertung abzugeben.
         </p>
     </div>
 </div>
