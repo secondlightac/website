@@ -58,6 +58,11 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
     weight = -60
 
       [[menu.main]]
+          name = "Status"
+          parent = "Über uns"
+          url = "/status/"
+
+      [[menu.main]]
         name = "Team"
         parent = "Über uns"
         url = "/team/"
