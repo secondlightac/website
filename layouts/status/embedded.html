@@ -4,7 +4,7 @@
 {{ $hasNews := false}}
 
 <div class="container">
-    <div class="row">
+    <div class="row mb-4">
         <div class="col-12">
             <h1 style="font-weight: 400;font-size:45px">{{ .Title }}</h1>
             <p class="text-muted" style="font-size:20px">{{ .Date.Format "02.01.2006" }} - {{ .Params.author }}</p>
@@ -22,30 +22,29 @@
             </p>
         </div>
     </div>-->
-    <div class="row">
+    <div class="row mb-4">
         <div class="col-12">
-            <h3>Einleitung</h3>
             <p>
                 Unsere Mission ist es jedem Kind Zugang zu digitaler Bildung zu geben.
                 Dafür schaffen wir digitale Bildung für Grundschulen und Bildungseinrichtungen.
                 Wir vermitteln auf spielerische Art und Weise Prozess- und Logik-Denken, Grundlagen der Algorithmik
                 und kreatives Problemlösen. Programmierung ist für uns ein Werkzeug, aber sollte niemals in den Weg
                 geraten.
-                Für die Umsetzung unserer Vision setzen wir auf starke Unternehmen aus der Region, die bereit sind sich
+                Für die Umsetzung unserer Vision setzen wir auf starke Unternehmen & Partner der Region, die bereit sind sich
                 für IT-Bildung einzusetzen.
-                So investieren wir gemeinsam in ein grundlegendes Medienverständnis und die digitalen
-                Kompetenzen der Gesellschaft der Zukunft.
+                So investieren wir gemeinsam in ein grundlegendes Medienverständnis und die digitale
+                Kompetenz der Zukunft.
             </p>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-4">
         <div class="col">
-            <h3>Zusammenfassung</h3>
+            <h2>Zusammenfassung</h2>
             <p>
-                Durch Ihre Unterstützung haben wir über <span class="playful-number i4k-blue">{{ .Params.kidsCount }} Kids</span> IT näher gebracht.
+                Durch Ihre Unterstützung haben wir über <span class="playful-number i4k-blue">{{ .Params.kidsCount }} Kids</span> erreichen können.
                 Diese verteilen sich auf <span class="playful-number i4k-red">{{ .Params.customerCount }} Schulen</span> in {{ .Params.stateCount}}
                 Bundesländern.
-                Mittlerweile arbeiten wir mit <span class="playful-number i4k-blue">{{ .Params.tutorCount }} Studenten</span> zusammen, um für unsere Kunden
+                Mittlerweile arbeiten wir mit <span class="playful-number i4k-blue">{{ add .Params.tutorCount 20}} Studenten</span> zusammen, um für unsere Kunden
                 preiswert
                 digitale Bildungsangebote zu schaffen. Dabei kommt unser Angebot bei den Schülern und Lehrern gut an.
                 Damit möglichst viele Schüler an dem Kurs teilnehmen können, finden sich unsere Inhalte sowohl
@@ -82,7 +81,7 @@
 
     <div class="row mb-5">
         <div class="col">
-            <h3>IT4Kids in Zahlen</h3>
+            <h2>IT4Kids in Zahlen</h2>
             <div class="row">
                 <div class="col-12 col-lg-4 mb-2">
                     <div class="bg-white rounded-lg p-5 shadow h-100">
@@ -107,17 +106,14 @@
                         <span class="progress-bar border-primary"></span>
           </span>
                             <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                <div class="h2 font-weight-bold">{{.Params.tutorCount}}</div>
+                                <div class="h2 font-weight-bold">{{add .Params.tutorCount 20}}</div>
                             </div>
                         </div>
                         <div class="row text-center mt-4">
-                            <div class="col-6 border-right">
-                                <div class="h4 font-weight-bold mb-0">28%</div>
-                                <span class="small text-gray">Davon Neu</span>
-                            </div>
-                            <div class="col-6">
-                                <div class="h4 font-weight-bold mb-0">60%</div>
-                                <span class="small text-gray">Haben über 1 Jahr Erfahrung</span>
+                            <div class="col">
+                                <p class="text-muted">
+                                    Wir bilden Studenten aus und schicken Sie als preiswerte Kursleitungen an die Schulen.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -126,9 +122,9 @@
         </div>
     </div>
     {{ if .Content }}
-    <div class="row">
+    <div class="row mb-4">
         <div class="col">
-            <h3>Detailbericht</h3>
+            <h2>Detailbericht</h2>
             {{ .Content }}
         </div>
     </div>

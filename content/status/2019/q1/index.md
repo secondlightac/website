@@ -5,8 +5,11 @@ startDate: 2019-01-01T00:00:00+00:00
 draft: false
 author: "IT4Kids"
 kidsCount: 1200
-customerCount: 25
+customerCount: 31
+ogsCustomerCount: 25 
+regularCustomerCount: 2
+licensedCustomerCount: 1
+eventCustomerCount: 3
 stateCount: 3
-tutorCount: 40
+tutorCount: 21
 ---
-Test!
