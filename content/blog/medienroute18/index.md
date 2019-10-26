@@ -2,6 +2,7 @@
 title: "Medienroute Aachen - Digitale Bildung im Fokus"
 date: 2018-11-07T20:00:00+00:00
 draft: false
+partnerFeatured: true
 author: "IT4Kids"
 ---
 

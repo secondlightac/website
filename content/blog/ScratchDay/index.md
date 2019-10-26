@@ -4,6 +4,7 @@ date: 2018-08-28T00:00:00+02:00
 draft: false
 author: "Johanna Tolzmann"
 image: "scratchday.png"
+partnerFeatured: true
 ---
 
 Infosphere - 21. Juli 2018

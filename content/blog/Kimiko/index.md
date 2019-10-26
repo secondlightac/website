@@ -2,6 +2,7 @@
 title: "IT4Kids meets Kimiko"
 date: 2018-06-25T20:00:00+00:00
 draft: false
+partnerFeatured: true
 author: "Lucas Mosig"
 ---
 
