@@ -1,0 +1,38 @@
+{{ $img := .Resources.GetMatch "image.*" }}
+<div class="col-md-6 mb-2">
+    <article class="card h-100">
+            <div class="row no-gutters h-100">
+                <div class="col-4">
+                    <a href="{{ .URL }}">
+                        {{ with $img }}
+                        <div class="h-100 w-100"
+                             style="background-image: url({{ .RelPermalink }});
+                     background-size: cover;
+                     background-repeat: no-repeat;
+                     background-position: center center;"></div>
+                        {{ end }}
+                    </a>
+                </div>
+                <div class="col-8 col-md-6">
+                    <div class="card-body p-2">
+                        <h5 class="card-title m-1">{{ .Title }}</h5>
+                        <div class="card-text d-none d-lg-block">
+                            <div class="text-muted">
+                                <time datetime="{{ .Params.Date }}">{{ .Date.Format "01.01.2006" }}</time>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-md-2 my-auto">
+                    <a href="{{ .URL }}" class="btn btn-primary  pull-right">Mehr</a>
+                </div>
+            </div>
+            <div class="d-block d-lg-none card-footer">
+                <span class="text-muted my-auto">
+                    <time datetime="{{ .Params.Date }}">{{ .Date.Format "01.01.2006" }}</time>
+                </span>
+                <a href="{{ .URL }}" class="btn btn-sm btn-primary float-right">Weiterlesen</a>
+            </div>
+    </article>
+</div>

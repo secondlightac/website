@@ -1,0 +1,215 @@
+{{ $img := .Page.Resources.GetMatch "image.*" }}
+{{ $dateRangeStart := (time .Params.startDate) }}
+{{ $dateRangeEnd := (time .Params.date) }}
+{{ $hasNews := false}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 style="font-weight: 400;font-size:45px">{{ .Title }}</h1>
+            <p class="text-muted" style="font-size:20px">{{ .Date.Format "02.01.2006" }} - {{ .Params.author }}</p>
+        </div>
+    </div>
+    <!---<div class="row">
+        <div class="mt-4 col-9 col-md-12">
+            <p style="color:gray">
+                <span class="fa fa-quote-left mb-2" style="font-size: 15px;opacity: 0.2;"></span><br>
+                <i>Everybody should learn how to <strong style="color:black">code</strong>, because it teaches you how
+                    to <strong style="color:black">think</strong>.
+                    <br>
+                    <span style="color:black;font-size: small;">- Steve Jobs</span>
+                </i>
+            </p>
+        </div>
+    </div>-->
+    <div class="row">
+        <div class="col-12">
+            <h3>Einleitung</h3>
+            <p>
+                Unsere Mission ist es jedem Kind Zugang zu digitaler Bildung zu geben.
+                Dafür schaffen wir digitale Bildung für Grundschulen und Bildungseinrichtungen.
+                Wir vermitteln auf spielerische Art und Weise Prozess- und Logik-Denken, Grundlagen der Algorithmik
+                und kreatives Problemlösen. Programmierung ist für uns ein Werkzeug, aber sollte niemals in den Weg
+                geraten.
+                Für die Umsetzung unserer Vision setzen wir auf starke Unternehmen aus der Region, die bereit sind sich
+                für IT-Bildung einzusetzen.
+                So investieren wir gemeinsam in ein grundlegendes Medienverständnis und die digitalen
+                Kompetenzen der Gesellschaft der Zukunft.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Zusammenfassung</h3>
+            <p>
+                Durch Ihre Unterstützung haben wir über <b>{{ .Params.kidsCount }} Kids</b> IT näher gebracht.
+                Diese verteilen sich auf <b>{{ .Params.customerCount }} Schulen</b> in {{ .Params.stateCount}}
+                Bundesländern.
+                Mittlerweile arbeiten wir mit <b>{{ .Params.tutorCount }} Studenten</b> zusammen, um für unsere Kunden
+                preiswert
+                digitale Bildungsangebote zu schaffen. Dabei kommt unser Angebot bei den Schülern und Lehrern gut an.
+                Damit möglichst viele Schüler an dem Kurs teilnehmen können, finden sich unsere Inhalte sowohl
+                im regulären Schulunterricht als auch im AG-Angebot wieder.
+            </p>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col">
+            <h3>IT4Kids in Zahlen</h3>
+            <div class="row">
+                <div class="col-12 col-lg-4 mb-2">
+                    <div class="bg-white rounded-lg p-5 shadow h-100">
+                        <h2 class="h6 font-weight-bold text-center mb-4">Kundenentwicklung</h2>
+                        <canvas id="chartCustomerHistory" width="400" height="400"></canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-2">
+                    <div class="bg-white rounded-lg p-5 shadow h-100">
+                        <h2 class="h6 font-weight-bold text-center mb-4">Kursverteilung</h2>
+                        <canvas id="chartCourseTypeDistribution" width="400" height="400"></canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-2">
+                    <div class="bg-white rounded-lg p-5 shadow h-100">
+                        <h2 class="h6 font-weight-bold text-center mb-4">Engagierte Studenten</h2>
+                        <div class="progress mx-auto" data-value='{{.Params.tutorCount}}'>
+                            <span class="progress-left">
+                        <span class="progress-bar border-primary"></span>
+          </span>
+                            <span class="progress-right">
+                        <span class="progress-bar border-primary"></span>
+          </span>
+                            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="h2 font-weight-bold">{{.Params.tutorCount}}</div>
+                            </div>
+                        </div>
+                        <div class="row text-center mt-4">
+                            <div class="col-6 border-right">
+                                <div class="h4 font-weight-bold mb-0">28%</div>
+                                <span class="small text-gray">Davon Neu</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 font-weight-bold mb-0">60%</div>
+                                <span class="small text-gray">Haben über 1 Jahr Erfahrung</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ $pages := slice }}
+            {{ range $index,$value := (where .Site.RegularPages "Section" "blog") }}
+            {{ if ((time $value.Params.date).Before $dateRangeEnd)}}
+            {{ if ((time $value.Params.date).After $dateRangeStart)}}
+            {{ if .Params.partnerFeatured}}
+            {{ $pages = $pages | append . }}
+            {{ end }}
+            {{ end }}
+            {{ end }}
+            {{ end }}
+            {{ if $pages }}
+            <h3>Neuigkeiten</h3>
+            <div class="row">
+                {{ range $pages}}
+                {{ partial "blogCardDense.html" . }}
+                {{ end }}
+            </div>
+            <p class="float-right text-muted">
+                Weitere Neuigkeiten haben wir für Sie auf unserem <a href="/blog">Blog</a> zusammengestellt.
+            </p>
+            {{ end }}
+
+        </div>
+    </div>
+    {{ if .Content }}
+    <div class="row">
+        <div class="col">
+            <h3>Detailbericht</h3>
+            {{ .Content }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<script>
+    var ctx = document.getElementById('chartCourseTypeDistribution').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['OGS', 'Regelunterricht', 'Lizensiert', 'Events'],
+            datasets: [{
+                label: '# of Votes',
+                data: [{{.Params.ogsCustomerCount}},{{.Params.regularCustomerCount}},{{.Params.licensedCustomerCount}},{{.Params.eventCustomerCount}}],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+<script>
+    var ctx = document.getElementById('chartCustomerHistory').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+
+            labels: [{{ range (where .Site.RegularPages.Reverse "Section" "status") }}{{ if ((time .Params.date).Before $dateRangeEnd)}}'{{ dateFormat "01.2006" (time .Params.date)}}',{{ end }}{{ end }}'{{ dateFormat "January 2006" (time .Params.date)}}'],
+            datasets: [{
+                label: '# Kunden',
+                data: [{{ range (where .Site.RegularPages.Reverse "Section" "status") }}{{ if ((time .Params.date).Before $dateRangeEnd)}}"{{ .Params.customerCount}}",{{ end }}{{ end }}'{{ .Params.customerCount }}'],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
