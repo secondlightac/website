@@ -142,7 +142,7 @@
         data: {
             labels: ['OGS', 'Regelunterricht', 'Lizensiert', 'Events'],
             datasets: [{
-                label: '# of Votes',
+                label: '',
                 data: [{{.Params.ogsCustomerCount}},{{.Params.regularCustomerCount}},{{.Params.licensedCustomerCount}},{{.Params.eventCustomerCount}}],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -164,6 +164,7 @@
             }]
         },
         options: {
+            legend: false,
             scales: {
                 yAxes: [{
                     ticks: {
