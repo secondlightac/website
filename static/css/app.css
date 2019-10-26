@@ -488,3 +488,19 @@ aside.sidebar .single h3.side-title:after {
     top: 0;
     left: 0;
 }
+
+.playful-number {
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "Corbel";
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.i4k-red {
+    color: #d32144;
+}
+
+.i4k-blue {
+    color: #1961ac;
+}
