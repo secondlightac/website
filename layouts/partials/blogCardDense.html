@@ -16,10 +16,8 @@
                 <div class="col-8 col-md-6">
                     <div class="card-body p-2">
                         <h5 class="card-title m-1">{{ .Title }}</h5>
-                        <div class="card-text d-none d-lg-block">
-                            <div class="text-muted">
-                                <time datetime="{{ .Params.Date }}">{{ .Date.Format "01.01.2006" }}</time>
-                            </div>
+                        <div class="m-1 card-text d-none d-lg-block text-muted">
+                            {{ .Date.Format "01.01.2006" }}
                         </div>
 
                     </div>
