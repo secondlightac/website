@@ -125,7 +125,7 @@
                             <div class="col-12">
                                 <div class="text-center p-0 d-flex align-items-center">
                                     <canvas id="chartTutorDistributions" width="350" height="350"></canvas>
-                                    <h3 class="w-100 position-absolute my-auto">{{ .Params.studentCount }}</h3>
+                                    <h3 style="padding-right: 30px" class="h1 w-100 position-absolute my-auto">{{ .Params.studentCount }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -180,14 +180,7 @@
     }]
     },
     options: {
-            legend: false,
-            scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
+            legend: false
     }
     });
 </script>
