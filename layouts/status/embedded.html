@@ -44,7 +44,7 @@
                 Durch Ihre Unterstützung haben wir über <span class="playful-number i4k-blue">{{ .Params.kidsCount }} Kids</span> erreichen können.
                 Diese verteilen sich auf <span class="playful-number i4k-red">{{ .Params.customerCount }} Schulen & Bildungseinrichtungen</span> in {{ .Params.stateCount}}
                 Bundesländern.
-                Mittlerweile arbeiten wir mit <span class="playful-number i4k-blue">{{ add .Params.tutorCount 20}} Studenten</span> zusammen, um für unsere Kunden
+                Mittlerweile arbeiten wir mit <span class="playful-number i4k-blue">{{ .Params.studentCount }} Studenten</span> zusammen, um für unsere Kunden
                 preiswert
                 digitale Bildungsangebote zu schaffen. Dabei kommt unser Angebot bei den Schülern und Lehrern gut an.
                 Damit möglichst viele Schüler an dem Kurs teilnehmen können, finden sich unsere Inhalte sowohl
@@ -125,7 +125,7 @@
                             <div class="col-12">
                                 <div class="text-center p-0 d-flex align-items-center">
                                     <canvas id="chartTutorDistributions" width="350" height="350"></canvas>
-                                    <h3 class="w-100 position-absolute my-auto">{{ add .Params.tutorCount 20 }}</h3>
+                                    <h3 class="w-100 position-absolute my-auto">{{ .Params.studentCount }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -156,10 +156,10 @@
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Über 1 Jahr Erfahrung', 'Neu'],
+            labels: ['Über 1 Jahr Erfahrung', 'Unter 1 Jahr Erfahrung'],
             datasets: [{
                 label: '',
-                data: [{{.Params.tutorCount}},{{sub .Params.tutorCount .Params.newTutorCount}}],
+                data: [{{sub .Params.studentCount .Params.newStudentCount}},{{.Params.newStudentCount}}],
     backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
