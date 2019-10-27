@@ -2,6 +2,7 @@
 title: "IT4Kids im Regelunterricht"
 date: 2019-01-12T16:00:00
 draft: false
+partnerFeatured: true
 author: "Johanna Tolzmann"
 ---
 

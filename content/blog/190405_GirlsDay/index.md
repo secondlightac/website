@@ -3,6 +3,7 @@ title: "Girls’Day mit IT4Kids im digitalHub Aachen "
 date: 2019-04-05T11:00:00+00:00
 draft: false
 author: "IT4Kids"
+partnerFeatured: true
 ---
 
 Willkommen in der Monsterwerkstatt!

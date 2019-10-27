@@ -3,6 +3,7 @@ title: "Beratungstag mit Arkadia Management Consultants"
 date: 2018-10-29T11:00:00+00:00
 draft: false
 author: "IT4Kids"
+partnerFeatured: true
 ---
 
 Als soziales Projekt im Bildungssektor kämpfen wir regelmäßig gegen das selbe Problem:
