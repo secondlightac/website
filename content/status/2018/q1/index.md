@@ -12,4 +12,5 @@ licensedCustomerCount: 0
 eventCustomerCount: 2
 stateCount: 1
 tutorCount: 7
+newTutorCount: 3
 ---

@@ -87,32 +87,52 @@
                     <div class="bg-white rounded-lg p-5 shadow h-100">
                         <h2 class="h6 font-weight-bold text-center mb-4">Kundenentwicklung</h2>
                         <canvas id="chartCustomerHistory" width="400" height="400"></canvas>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <p class="text-muted">
+                                    Am Anfang des Jahres 2019 haben wir eine große Umstruktierung gemacht,
+                                    die uns einige Kunden gekostet hat.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-2">
                     <div class="bg-white rounded-lg p-5 shadow h-100">
                         <h2 class="h6 font-weight-bold text-center mb-4">Kursverteilung</h2>
                         <canvas id="chartCourseTypeDistribution" width="400" height="400"></canvas>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <p class="text-muted">
+                                    Wir wollen allen Schulen helfen auf eigenen Beinen zu stehen.
+                                    Dadurch wird aus jeder Schule ein kostengünstiger Lizenzkunde.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 mb-2">
                     <div class="bg-white rounded-lg p-5 shadow h-100">
                         <h2 class="h6 font-weight-bold text-center mb-4">Engagierte Studenten</h2>
-                        <div class="progress mx-auto" data-value='{{.Params.tutorCount}}'>
-                            <span class="progress-left">
-                        <span class="progress-bar border-primary"></span>
-          </span>
-                            <span class="progress-right">
-                        <span class="progress-bar border-primary"></span>
-          </span>
-                            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                <div class="h2 font-weight-bold">{{add .Params.tutorCount 20}}</div>
+                        <div class="text-center mx-auto">
+                            <div class="text-left" style="display: inline-block; font-size: 10px;">
+                                <span style="margin-right: 5px;display: inline-block; width: 20px; height: 10px; background-color: rgba(255, 99, 132, 0.2); border: 1px solid rgba(255, 99, 132, 1)"></span> Über 1 Jahr Erfahrung
+                                <br>
+                                <span style="margin-right: 5px;display: inline-block; width: 20px; height: 10px; background-color: rgba(54, 162, 235, 0.2); border: 1px solid rgba(54, 162, 235, 1)"></span> Unter 1 Jahr Erfahrung
+                            </div>
+                        </div>
+                        <div class="row align-items-center  pr-4">
+                            <div class="col-12">
+                                <div class="text-center p-0 d-flex align-items-center">
+                                    <canvas id="chartTutorDistributions" width="350" height="350"></canvas>
+                                    <h3 class="w-100 position-absolute my-auto">{{ add .Params.tutorCount 20 }}</h3>
+                                </div>
                             </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col">
                                 <p class="text-muted">
-                                    Wir bilden Studenten aus und schicken Sie als preiswerte Kursleitungen an unsere Partnerschulen.
+                                    Wir bilden Studenten aus und schicken diese als preiswerte Kursleitungen an unsere Partnerschulen.
                                 </p>
                             </div>
                         </div>
@@ -131,6 +151,46 @@
     {{ end }}
 </div>
 
+<script>
+    var ctx = document.getElementById('chartTutorDistributions').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Über 1 Jahr Erfahrung', 'Neu'],
+            datasets: [{
+                label: '',
+                data: [{{.Params.tutorCount}},{{sub .Params.tutorCount .Params.newTutorCount}}],
+    backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+    ],
+        borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+    ],
+        borderWidth: 1
+    }]
+    },
+    options: {
+            legend: false,
+            scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+    });
+</script>
 <script>
     var ctx = document.getElementById('chartCourseTypeDistribution').getContext('2d');
     var myChart = new Chart(ctx, {
@@ -185,12 +245,7 @@
                     'rgba(25,97,172,0.8)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
                 ],
                 fill: 'start',
                 borderWidth: 1
