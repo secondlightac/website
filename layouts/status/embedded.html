@@ -38,33 +38,6 @@
             </p>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            {{ $pages := slice }}
-            {{ range $index,$value := (where .Site.RegularPages "Section" "blog") }}
-            {{ if ((time $value.Params.date).Before $dateRangeEnd)}}
-            {{ if ((time $value.Params.date).After $dateRangeStart)}}
-            {{ if .Params.partnerFeatured}}
-            {{ $pages = $pages | append . }}
-            {{ end }}
-            {{ end }}
-            {{ end }}
-            {{ end }}
-            {{ if $pages }}
-            <h3>Neuigkeiten</h3>
-            <div class="row">
-                {{ range $pages}}
-                {{ partial "blogCardDense.html" . }}
-                {{ end }}
-            </div>
-            <p class="float-right text-muted">
-                Weitere Neuigkeiten haben wir für Sie auf unserem <a href="/blog">Blog</a> zusammengestellt.
-            </p>
-            {{ end }}
-
-        </div>
-    </div>
-
     <div class="row mb-5">
         <div class="col">
             <h2>IT4Kids in Zahlen</h2>
@@ -125,6 +98,32 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ $pages := slice }}
+            {{ range $index,$value := (where .Site.RegularPages "Section" "blog") }}
+            {{ if ((time $value.Params.date).Before $dateRangeEnd)}}
+            {{ if ((time $value.Params.date).After $dateRangeStart)}}
+            {{ if .Params.partnerFeatured}}
+            {{ $pages = $pages | append . }}
+            {{ end }}
+            {{ end }}
+            {{ end }}
+            {{ end }}
+            {{ if $pages }}
+            <h3>Neuigkeiten</h3>
+            <div class="row">
+                {{ range $pages}}
+                {{ partial "blogCardDense.html" . }}
+                {{ end }}
+            </div>
+            <p class="float-right text-muted">
+                Weitere Neuigkeiten haben wir für Sie auf unserem <a href="/blog">Blog</a> zusammengestellt.
+            </p>
+            {{ end }}
+
         </div>
     </div>
     {{ if .Content }}
