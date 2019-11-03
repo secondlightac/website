@@ -138,11 +138,6 @@ body {
     transition: none;
     display: none;
 }
-@media (max-width: 768px) {
-    .navbar-custom .navbar-collapse {
-        height: 1000px;
-    }
-}
 /* END Disable collapse */
 /* Add animation to mobile menu button */
 .navbar-toggler:focus,

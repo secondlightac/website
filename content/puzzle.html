@@ -1,0 +1,88 @@
+---
+title: "Puzzle"
+date: 2019-11-03T12:00:00+02:00
+draft: false
+description: <h3>Schaffst du dieses Puzzle? Dann kannst du auch problemlos Tutor werden!</h3>
+titleClass: "heading"
+---
+
+<div id="exercise" class="row pb-2">
+    <div class="col">
+        <p class="lead">
+            Die Aufgabe:
+        </p>
+        <p>
+            Du bist auf Entdeckungsreise und suchst nach einem verborgenen Schatz. Erreiche den Eingang <span
+                style="font-style: italic">(helle Fläche)</span> zur Pyramide. Doch Vorsicht! Es könnten Gefahren auf
+            dich warten. Sammle deshalb das Schild unterwegs ein, um dich zu schützen. Dieses befindet sich jedoch
+            zufällig auf Punkt A, B oder C.
+        </p>
+        <p class="lead">
+            Die Regeln:
+        </p>
+        <ul>
+            <li>maximal 10 Blöcke</li>
+        </ul>
+    </div>
+</div>
+
+<div id="exercise_won" class="row d-none pb-2">
+    <div class="col">
+        <p class="lead mb-3 text-center">
+            Herzlichen Glückwunsch!
+        </p>
+        <p class="text-center">
+            Ähnliche Aufgaben müssen auch die Schüler lösen. Dafür benötigen sie jedoch etwas Unterstützung. <span
+                style="font-weight: bold">Deine</span> Unterstützung!<br>
+            Interessiert?
+        </p>
+        <p class="lead text-center">
+            <a class="btn btn-primary btn-lg" href="/mitmachen">Jetzt Tutor werden!</a>
+        </p>
+    </div>
+</div>
+
+<button id="btn_Run" type="button" class="btn btn-primary"><i data-feather="play"></i></button>
+<button id="btn_Reset" type="button" class="btn btn-secondary"><i data-feather="rotate-ccw"></i></button>
+<div class="row">
+    <div class="col-md-6 col-12">
+        <div id="blocklyArea" style="height: 100%;">
+            <div id="blocklyDiv"></div>
+        </div>
+    </div>
+    <div id="canvasArea" class="col-md-6 col-12">
+        <div id="canvasDiv"></div>
+    </div>
+</div>
+
+<xml id="toolbox" style="display: none">
+    <category name="Figur" categorystyle="custom_game_category">
+        <block type="move"></block>
+        <block type="pickup"></block>
+        <block type="shieldNearby"></block>
+    </category>
+    <sep></sep>
+    <category name="Kontrolle" categorystyle="custom_control_category">
+        <block type="controls_if"></block>
+    </category>
+    <category name="Schleifen" categorystyle="custom_loop_category">
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <shadow type="math_number">
+                    <field name="NUM">3</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+</xml>
+
+<script src="lib/blockly/blockly_compressed.js"></script>
+<script src="lib/blockly/blocks_compressed.js"></script>
+<script src="lib/blockly/javascript_compressed.js"></script>
+<script src="lib/blockly/de.js"></script>
+<script src="lib/p5/p5.min.js"></script>
+<script src="lib/p5/p5.play.js"></script>
+<script src="lib/feather.min.js"></script>
+<script src="js/customBlocks/blocks.js"></script>
+<script src="js/customBlocks/code.js"></script>
+<script src="js/main.js"></script>
