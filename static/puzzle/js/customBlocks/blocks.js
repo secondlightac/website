@@ -31,9 +31,9 @@ Blockly.Blocks['pickup'] = {
 Blockly.Blocks['shieldNearby'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("Schild vor mir");
+      .appendField("Schild vor mir?");
     this.setOutput(true, "Boolean");
-    this.setStyle('custom_game_blocks');
+    this.setStyle('custom_control_blocks');
     this.setTooltip("");
     this.setHelpUrl("");
   }

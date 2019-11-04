@@ -139,6 +139,7 @@ class GameEngine {
             if (this.execCounter === this.solution.length) {
                 document.getElementById("exercise").classList.add("d-none");
                 document.getElementById("exercise_won").classList.remove("d-none");
+                window.scrollTo(0, 0);
                 this.displayMessage("Level geschafft!", '#7bc950');
             }
         }
@@ -167,7 +168,7 @@ class GameEngine {
         this.player.setVelocity(velX, velY);
         this.animT = setTimeout(() => {
             this.player.setVelocity(0, 0);
-            this.shield.setVelocity(0,0);
+            this.shield.setVelocity(0, 0);
             this.animT = null;
         }, 400);
 
@@ -286,7 +287,7 @@ function onResize() {
             game.resize(500);
         }
     } else {
-        div.style.width = winWidth - 30 + "px";
+        div.style.width = winWidth - 50 + "px";
         div.style.height = "350px";
         if (game !== null) {
             if (game.resizeStack.length === 0) {
@@ -294,7 +295,7 @@ function onResize() {
                     game.resize(null, true);
                 }, 500);
             }
-            game.resizeStack.push(winWidth - 30);
+            game.resizeStack.push(winWidth - 50);
         }
     }
     Blockly.svgResize(ws);
