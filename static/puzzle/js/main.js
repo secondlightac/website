@@ -242,6 +242,7 @@ function reColour(block, style) {
     const oldInit = block.init;
     block.init = function () {
         oldInit.call(this);
+        this.setMutator(null);
         this.setStyle(style);
     }
 }
