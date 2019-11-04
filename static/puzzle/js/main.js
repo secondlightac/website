@@ -261,7 +261,7 @@ function onResize() {
     let div = document.getElementById('blocklyDiv');
     div.style.left = "0px";
     div.style.top = "0px";
-    let winWidth = window.innerWidth;
+    let winWidth = screen.width;
     if (winWidth >= 1200) {
         div.style.width = "540px";
         div.style.height = "500px";
@@ -287,7 +287,7 @@ function onResize() {
             game.resize(500);
         }
     } else {
-        div.style.width = winWidth - 50 + "px";
+        div.style.width = winWidth - 30 + "px";
         div.style.height = "350px";
         if (game !== null) {
             if (game.resizeStack.length === 0) {
@@ -295,7 +295,7 @@ function onResize() {
                     game.resize(null, true);
                 }, 500);
             }
-            game.resizeStack.push(winWidth - 50);
+            game.resizeStack.push(winWidth - 30);
         }
     }
     Blockly.svgResize(ws);
