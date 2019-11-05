@@ -19,7 +19,7 @@ Blockly.Blocks['move'] = {
 Blockly.Blocks['pickup'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("Hebe Gegenstand auf");
+      .appendField("Hebe Schild auf");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setStyle('custom_game_blocks');
@@ -31,7 +31,7 @@ Blockly.Blocks['pickup'] = {
 Blockly.Blocks['shieldNearby'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("Schild vor mir?");
+      .appendField("Schild neben mir?");
     this.setOutput(true, "Boolean");
     this.setStyle('custom_control_blocks');
     this.setTooltip("");

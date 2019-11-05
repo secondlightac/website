@@ -1,5 +1,7 @@
+//initialize icons
 feather.replace();
 
+//check if client is on mobile device
 const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 let img_bg;
@@ -7,12 +9,14 @@ let img_player;
 let img_shield;
 let game = null;
 
+//load images
 function preload() {
     img_bg = loadImage('assets/desert.jpg');
     img_player = loadImage('assets/adventurer.png');
     img_shield = loadImage('assets/shield.png');
 }
 
+//setup canvas
 function setup() {
     let myCanvas = createCanvas(500, 500);
     if (isMobile) {
@@ -21,6 +25,7 @@ function setup() {
         frameRate(60);
     }
     myCanvas.parent('canvasDiv');
+    //add sprites
     let player = createSprite(62, 130);
     player.addImage(img_player);
     player.scale = 0.7;
@@ -32,6 +37,7 @@ function setup() {
     game = new GameEngine(player, shield);
 }
 
+//draw-loop
 function draw() {
     background(img_bg);
     drawSprites();
@@ -115,6 +121,7 @@ class GameEngine {
         this.start();
     }
 
+    //called automatically every 500ms
     run() {
         if (this.queue.length > 0) {
             let command = this.queue.shift();
@@ -130,9 +137,7 @@ class GameEngine {
                         this.animate(0, -100 * this.factor);
                         break;
                     case "pickup":
-                        if (this.isShieldNearby) {
-                            this.shield.position.y -= 46 * this.factor;
-                        }
+                        this.shield.position.y -= 46 * this.factor;
                         break;
                 }
                 this.execCounter++;
@@ -151,6 +156,7 @@ class GameEngine {
         }
     }
 
+    //display a message on the center of the canvas
     displayMessage(msg, color) {
         noLoop();
         setTimeout(() => {
@@ -165,10 +171,11 @@ class GameEngine {
         }, 50);
     }
 
+    //animate manually by setting and clearing velocity over 400ms
     animate(x, y) {
-        let fr = isMobile ? 30 : 60;
-        let velX = x / (fr * 0.4);
-        let velY = y / (fr * 0.4);
+        let FR = isMobile ? 30 : 60;
+        let velX = x / (FR * 0.4);
+        let velY = y / (FR * 0.4);
         if (game.player.overlap(game.shield)) {
             this.shield.setVelocity(velX, velY);
         }
@@ -181,6 +188,7 @@ class GameEngine {
 
     }
 
+    //start process
     start() {
         this.stmtCounter++;
         if (!this.running) {
@@ -189,6 +197,7 @@ class GameEngine {
         }
     }
 
+    //stop process and animation
     stop() {
         if (this.running) {
             clearInterval(this.process);
@@ -202,6 +211,7 @@ class GameEngine {
         }
     }
 
+    //reset game and sprites
     reset() {
         loop();
         this.stop();
@@ -233,19 +243,7 @@ let blockStyles = {
     }
 };
 
-let categoryStyles = {
-    "custom_control_category": {
-        "colour": "#377771"
-    },
-    "custom_loop_category": {
-        "colour": "#5e99d1"
-    },
-    "custom_game_category": {
-        "colour": "#c75000"
-    }
-};
-
-function reColour(block, style) {
+function restyleBlock(block, style) {
     const oldInit = block.init;
     block.init = function () {
         oldInit.call(this);
@@ -254,16 +252,36 @@ function reColour(block, style) {
     }
 }
 
+restyleBlock(Blockly.Blocks["controls_if"], "custom_control_blocks");
+restyleBlock(Blockly.Blocks["controls_repeat_ext"], "custom_loop_blocks");
+restyleBlock(Blockly.Blocks["math_number"], "custom_loop_blocks");
+
+Blockly.Scrollbar.scrollbarThickness = 15;
+
 let ws = Blockly.inject(document.getElementById('blocklyDiv'), {
     toolbox: Blockly.Xml.textToDom(document.getElementById('toolbox').outerHTML),
-    maxBlocks: 10,
     sounds: false,
-    theme: new Blockly.Theme(blockStyles, categoryStyles)
+    trashcan: true,
+    scrollbars: true,
+    zoom: {
+        controls: false,
+        wheel: false,
+        startScale: 1,
+        maxScale: 1,
+        minScale: 0.7
+    },
+    theme: new Blockly.Theme(blockStyles, {})
 });
 
-reColour(Blockly.Blocks["controls_if"], "custom_control_blocks");
-reColour(Blockly.Blocks["controls_repeat_ext"], "custom_loop_blocks");
-reColour(Blockly.Blocks["math_number"], "custom_loop_blocks");
+function loadWorkspace(id) {
+    Blockly.Xml.domToWorkspace(document.getElementById(id), ws);
+}
+
+if (parseInt(new URL(window.location).searchParams.get('solution'))) {
+    loadWorkspace('solutionBlocks');
+} else {
+    loadWorkspace('startBlocks');
+}
 
 function onResize() {
     let div = document.getElementById('blocklyDiv');
@@ -271,6 +289,7 @@ function onResize() {
     div.style.top = "0px";
     let winWidth = window.innerWidth;
     let safeZone = 50;
+    let newScale = 1;
     if (isMobile) {
         winWidth = screen.width;
         safeZone = 30;
@@ -293,15 +312,18 @@ function onResize() {
         if (game !== null) {
             game.resize(350);
         }
+        newScale = 0.8;
     } else if (winWidth >= 576) {
         div.style.width = "500px";
         div.style.height = "500px";
         if (game !== null) {
             game.resize(500);
         }
+        newScale = 0.9;
     } else {
         div.style.width = winWidth - safeZone + "px";
         div.style.height = "350px";
+        //working with a stack because resizing takes time. Last size from event will be used
         if (game !== null) {
             if (game.resizeStack.length === 0) {
                 setTimeout(() => {
@@ -310,8 +332,20 @@ function onResize() {
             }
             game.resizeStack.push(winWidth - safeZone);
         }
+        newScale = 0.75;
     }
     Blockly.svgResize(ws);
+    ws.setScale(newScale);
+    scaleTrashcan(newScale);
+    ws.scroll(5, 5);
+}
+
+function scaleTrashcan(factor) {
+    let attr = ws.trashcan.svgGroup_.getAttribute('transform');
+    let xTranslate = parseInt(attr.substring(attr.indexOf('(') + 1, attr.indexOf(',')));
+    let yTranslate = parseInt(attr.substring(attr.indexOf(',') + 1, attr.indexOf(')')));
+    let newAttr = 'translate(' + Math.floor(xTranslate + 1 / factor * 15) + ',' + Math.floor(yTranslate + 1 / factor * 15) + ')' + ' scale(' + factor + ',' + factor + ')';
+    ws.trashcan.svgGroup_.setAttribute('transform', newAttr);
 }
 
 window.addEventListener('resize', onResize, false);
