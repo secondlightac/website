@@ -1,5 +1,7 @@
 feather.replace();
 
+const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 let img_bg;
 let img_player;
 let img_shield;
@@ -13,7 +15,11 @@ function preload() {
 
 function setup() {
     let myCanvas = createCanvas(500, 500);
-    frameRate(60);
+    if (isMobile) {
+        frameRate(30);
+    } else {
+        frameRate(60);
+    }
     myCanvas.parent('canvasDiv');
     let player = createSprite(62, 130);
     player.addImage(img_player);
@@ -160,8 +166,9 @@ class GameEngine {
     }
 
     animate(x, y) {
-        let velX = x / 24;
-        let velY = y / 24;
+        let fr = isMobile ? 30 : 60;
+        let velX = x / (fr * 0.4);
+        let velY = y / (fr * 0.4);
         if (game.player.overlap(game.shield)) {
             this.shield.setVelocity(velX, velY);
         }
@@ -262,7 +269,12 @@ function onResize() {
     let div = document.getElementById('blocklyDiv');
     div.style.left = "0px";
     div.style.top = "0px";
-    let winWidth = screen.width;
+    let winWidth = window.innerWidth;
+    let safeZone = 50;
+    if (isMobile) {
+        winWidth = screen.width;
+        safeZone = 30;
+    }
     if (winWidth >= 1200) {
         div.style.width = "540px";
         div.style.height = "500px";
@@ -288,7 +300,7 @@ function onResize() {
             game.resize(500);
         }
     } else {
-        div.style.width = winWidth - 30 + "px";
+        div.style.width = winWidth - safeZone + "px";
         div.style.height = "350px";
         if (game !== null) {
             if (game.resizeStack.length === 0) {
@@ -296,7 +308,7 @@ function onResize() {
                     game.resize(null, true);
                 }, 500);
             }
-            game.resizeStack.push(winWidth - 30);
+            game.resizeStack.push(winWidth - safeZone);
         }
     }
     Blockly.svgResize(ws);
