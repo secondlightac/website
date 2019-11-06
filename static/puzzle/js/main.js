@@ -53,6 +53,7 @@ class GameEngine {
         this.stmtCounter = 0;
         this.solution = [];
         this.running = false;
+        this.halted = false;
         this.animT = null;
         this.process = 0;
         this.offset = 0;
@@ -60,6 +61,7 @@ class GameEngine {
         this.resizeStack = [];
     }
 
+    //resize the canvas. set continuous to true if dragging browser
     resize(size, continuous) {
         if (continuous) {
             size = this.resizeStack.pop();
@@ -77,34 +79,37 @@ class GameEngine {
             this.shield.scale = 0.6 * this.factor;
             loop();
         }
+
         if (continuous) {
             this.resizeStack = [];
         }
     }
 
+    //main function to execute the code
     execute() {
         try {
             let code = Blockly.JavaScript.workspaceToCode(ws);
-            let exec = new Function("exec", code);
+            let exec = new Function('exec', code);
             this.generateLevel();
             exec();
         } catch (e) {
-            alert("Error! Please reset!");
+            alert('Error! Please reset!');
         }
     }
 
+    //generates the level by placing the shield and calculating the solution
     generateLevel() {
         let shieldSpawn = Math.floor(Math.random() * 3 + 1);
         this.shield.position.x = this.offset + 182 * this.factor + (shieldSpawn - 1) * 120 * this.factor;
-        this.solution.push("down", "down", "right");
+        this.solution.push('down', 'down', 'right');
         for (let i = 1; i <= 3; i++) {
             if (i === shieldSpawn) {
-                this.solution.push("pickup");
+                this.solution.push('pickup');
             } else {
-                this.solution.push("right");
+                this.solution.push('right');
             }
         }
-        this.solution.push("up", "up");
+        this.solution.push('up', 'up');
     }
 
     move(direction) {
@@ -113,11 +118,11 @@ class GameEngine {
     }
 
     isShieldNearby() {
-        return this.solution[this.stmtCounter] === "pickup";
+        return this.solution[this.stmtCounter] === 'pickup';
     }
 
     pickup() {
-        this.queue.push("pickup");
+        this.queue.push('pickup');
         this.start();
     }
 
@@ -127,31 +132,31 @@ class GameEngine {
             let command = this.queue.shift();
             if (command === this.solution[this.execCounter]) {
                 switch (command) {
-                    case "down":
+                    case 'down':
                         this.animate(0, 100 * this.factor);
                         break;
-                    case "right":
+                    case 'right':
                         this.animate(120 * this.factor, 0);
                         break;
-                    case "up":
+                    case 'up':
                         this.animate(0, -100 * this.factor);
                         break;
-                    case "pickup":
+                    case 'pickup':
                         this.shield.position.y -= 46 * this.factor;
                         break;
                 }
                 this.execCounter++;
             } else {
                 this.stop();
-                this.displayMessage("Die Aktion ist ungültig!\nBitte zurücksetzen! ", '#f22b29');
+                this.displayMessage('Die Aktion ist ungültig!\nBitte zurücksetzen! ', '#f22b29');
             }
         } else {
             this.stop();
             if (this.execCounter === this.solution.length) {
-                document.getElementById("exercise").classList.add("d-none");
-                document.getElementById("exercise_won").classList.remove("d-none");
+                document.getElementById('exercise').classList.add('d-none');
+                document.getElementById('exercise_won').classList.remove('d-none');
                 window.scrollTo(0, 0);
-                this.displayMessage("Level geschafft!", '#7bc950');
+                this.displayMessage('Level geschafft!', '#7bc950');
             }
         }
     }
@@ -159,6 +164,8 @@ class GameEngine {
     //display a message on the center of the canvas
     displayMessage(msg, color) {
         noLoop();
+        this.halted = true;
+        setBtnIcon('rotate-ccw');
         setTimeout(() => {
             filter(BLUR, 3);
             filter(GRAY);
@@ -215,6 +222,7 @@ class GameEngine {
     reset() {
         loop();
         this.stop();
+        this.halted = false;
         this.solution = [];
         this.execCounter = 0;
         this.stmtCounter = 0;
@@ -226,20 +234,20 @@ class GameEngine {
 }
 
 let blockStyles = {
-    "custom_control_blocks": {
-        "colourPrimary": "#377771",
-        "colourSecondary": "#377771",
-        "colourTertiary": "#377771"
+    'custom_control_blocks': {
+        'colourPrimary': '#377771',
+        'colourSecondary': '#377771',
+        'colourTertiary': '#377771'
     },
-    "custom_loop_blocks": {
-        "colourPrimary": "#5e99d1",
-        "colourSecondary": "#5e99d1",
-        "colourTertiary": "#5e99d1"
+    'custom_loop_blocks': {
+        'colourPrimary': '#5e99d1',
+        'colourSecondary': '#5e99d1',
+        'colourTertiary': '#5e99d1'
     },
-    "custom_game_blocks": {
-        "colourPrimary": "#c75000",
-        "colourSecondary": "#c75000",
-        "colourTertiary": "#c75000"
+    'custom_game_blocks': {
+        'colourPrimary': '#c75000',
+        'colourSecondary': '#c75000',
+        'colourTertiary': '#c75000'
     }
 };
 
@@ -252,9 +260,9 @@ function restyleBlock(block, style) {
     }
 }
 
-restyleBlock(Blockly.Blocks["controls_if"], "custom_control_blocks");
-restyleBlock(Blockly.Blocks["controls_repeat_ext"], "custom_loop_blocks");
-restyleBlock(Blockly.Blocks["math_number"], "custom_loop_blocks");
+restyleBlock(Blockly.Blocks['controls_if'], 'custom_control_blocks');
+restyleBlock(Blockly.Blocks['controls_repeat_ext'], 'custom_loop_blocks');
+restyleBlock(Blockly.Blocks['math_number'], 'custom_loop_blocks');
 
 Blockly.Scrollbar.scrollbarThickness = 15;
 
@@ -285,8 +293,8 @@ if (parseInt(new URL(window.location).searchParams.get('solution'))) {
 
 function onResize() {
     let div = document.getElementById('blocklyDiv');
-    div.style.left = "0px";
-    div.style.top = "0px";
+    div.style.left = '0px';
+    div.style.top = '0px';
     let winWidth = window.innerWidth;
     let safeZone = 50;
     let newScale = 1;
@@ -295,34 +303,39 @@ function onResize() {
         safeZone = 30;
     }
     if (winWidth >= 1200) {
-        div.style.width = "540px";
-        div.style.height = "500px";
+        div.style.width = '540px';
+        div.style.height = '500px';
+        btnAction.style['left'] = 540 + 45 + 'px';
         if (game !== null) {
             game.resize(500);
         }
     } else if (winWidth >= 992) {
-        div.style.width = "450px";
-        div.style.height = "450px";
+        div.style.width = '450px';
+        div.style.height = '450px';
+        btnAction.style['left'] = 450 + 45 + 'px';
         if (game !== null) {
             game.resize(450);
         }
     } else if (winWidth >= 768) {
-        div.style.width = "350px";
-        div.style.height = "350px";
+        div.style.width = '350px';
+        div.style.height = '350px';
+        btnAction.style['left'] = 350 + 45 + 'px';
         if (game !== null) {
             game.resize(350);
         }
         newScale = 0.8;
     } else if (winWidth >= 576) {
-        div.style.width = "500px";
-        div.style.height = "500px";
+        div.style.width = '500px';
+        div.style.height = '500px';
+        btnAction.style['left'] = '15px';
         if (game !== null) {
             game.resize(500);
         }
         newScale = 0.9;
     } else {
-        div.style.width = winWidth - safeZone + "px";
-        div.style.height = "350px";
+        div.style.width = winWidth - safeZone + 'px';
+        div.style.height = '350px';
+        btnAction.style['left'] = '15px';
         //working with a stack because resizing takes time. Last size from event will be used
         if (game !== null) {
             if (game.resizeStack.length === 0) {
@@ -348,16 +361,44 @@ function scaleTrashcan(factor) {
     ws.trashcan.svgGroup_.setAttribute('transform', newAttr);
 }
 
-window.addEventListener('resize', onResize, false);
-setTimeout(function () {
-    onResize();
-}, 250);
+let icons = {};
 
-document.getElementById('btn_Run').onclick = function () {
-    game.reset();
-    game.execute();
+function loadIcons(iconNames) {
+    const parser = new DOMParser();
+    iconNames.forEach(function (icon) {
+        icons[icon] = parser.parseFromString(feather.icons[icon].toSvg(), 'image/svg+xml').documentElement;
+    });
+}
+
+loadIcons(['play', 'rotate-ccw']);
+
+function setBtnIcon(iconName) {
+    btnAction.childNodes[1].replaceWith(icons[iconName]);
+    let text = '';
+    switch (iconName) {
+        case 'play':
+            text = 'Play';
+            break;
+        case 'rotate-ccw':
+            text = 'Reset';
+    }
+    document.getElementById('text_btnAction').innerHTML = text;
+}
+
+window.addEventListener('resize', onResize, false);
+window.onload = function (e) {
+    setTimeout(() => {
+        onResize();
+    }, 300);
 };
 
-document.getElementById('btn_Reset').onclick = function () {
+let btnAction = document.getElementById('btn_Action');
+btnAction.onclick = function () {
+    const halted = game.halted;
     game.reset();
+    if (!halted) {
+        game.execute();
+    } else {
+        setBtnIcon('play');
+    }
 };
