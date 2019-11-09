@@ -49,9 +49,8 @@ class GameEngine {
         this.player = player;
         this.shield = shield;
         this.queue = [];
-        this.execCounter = 0;
-        this.stmtCounter = 0;
-        this.solution = [];
+        this.holdingShield = false;
+        this.dfa = new GameDFA(states, 'qInit', 'qWin');
         this.running = false;
         this.halted = false;
         this.animT = null;
@@ -91,46 +90,43 @@ class GameEngine {
             let code = Blockly.JavaScript.workspaceToCode(ws);
             let exec = new Function('exec', code);
             this.generateLevel();
-            exec();
+            exec(); //simulate DFA
+            this.dfa.reset();
+            this.start(); // run DFA and animations
         } catch (e) {
             alert('Error! Please reset!');
         }
     }
 
-    //generates the level by placing the shield and calculating the solution
+    //generates the level by placing the shield and adjusting the corresponding state in the DFA
     generateLevel() {
         let shieldSpawn = Math.floor(Math.random() * 3 + 1);
+        this.dfa.reset(true);
+        let shieldState = 'qPf' + (3 + shieldSpawn);
+        this.dfa.states[shieldState].transitions['pickup'] = shieldState;
         this.shield.position.x = this.offset + 182 * this.factor + (shieldSpawn - 1) * 120 * this.factor;
-        this.solution.push('down', 'down', 'right');
-        for (let i = 1; i <= 3; i++) {
-            if (i === shieldSpawn) {
-                this.solution.push('pickup');
-            } else {
-                this.solution.push('right');
-            }
-        }
-        this.solution.push('up', 'up');
     }
 
     move(direction) {
         this.queue.push(direction);
-        this.start();
+        this.dfa.readWord(direction);
     }
 
     isShieldNearby() {
-        return this.solution[this.stmtCounter] === 'pickup';
+        return this.dfa.states[this.dfa.currentState].transitions.hasOwnProperty('pickup');
     }
 
     pickup() {
         this.queue.push('pickup');
-        this.start();
+        this.dfa.readWord('pickup');
     }
 
     //called automatically every 500ms
     run() {
         if (this.queue.length > 0) {
             let command = this.queue.shift();
-            if (command === this.solution[this.execCounter]) {
+            //verify if the command is valid using the DFA
+            if (this.dfa.readWord(command)) {
                 switch (command) {
                     case 'down':
                         this.animate(0, 100 * this.factor);
@@ -142,21 +138,18 @@ class GameEngine {
                         this.animate(0, -100 * this.factor);
                         break;
                     case 'pickup':
+                        this.holdingShield = true;
                         this.shield.position.y -= 46 * this.factor;
                         break;
                 }
-                this.execCounter++;
             } else {
-                this.stop();
-                this.displayMessage('Die Aktion ist ungültig!\nBitte zurücksetzen! ', '#f22b29');
+                game.lose();
             }
         } else {
-            this.stop();
-            if (this.execCounter === this.solution.length) {
-                document.getElementById('exercise').classList.add('d-none');
-                document.getElementById('exercise_won').classList.remove('d-none');
-                window.scrollTo(0, 0);
-                this.displayMessage('Level geschafft!', '#7bc950');
+            if (this.dfa.currentState === this.dfa.winState && this.holdingShield) {
+                game.win();
+            } else {
+                this.stop();
             }
         }
     }
@@ -195,9 +188,21 @@ class GameEngine {
 
     }
 
+    win() {
+        this.stop();
+        document.getElementById('exercise').classList.add('d-none');
+        document.getElementById('exercise_won').classList.remove('d-none');
+        window.scrollTo(0, 0);
+        this.displayMessage('Level geschafft!', '#7bc950');
+    }
+
+    lose() {
+        this.stop();
+        this.displayMessage('Das war leider falsch!\nBitte zurücksetzen! ', '#f22b29');
+    }
+
     //start process
     start() {
-        this.stmtCounter++;
         if (!this.running) {
             this.running = true;
             this.process = setInterval(this.run.bind(this), 500);
@@ -222,10 +227,8 @@ class GameEngine {
     reset() {
         loop();
         this.stop();
+        this.holdingShield = false;
         this.halted = false;
-        this.solution = [];
-        this.execCounter = 0;
-        this.stmtCounter = 0;
         this.player.position.x = this.offset + 62 * this.factor;
         this.player.position.y = this.offset + 130 * this.factor;
         this.shield.position.x = this.offset + 182 * this.factor + (Math.floor(Math.random() * 3 + 1) - 1) * 120 * this.factor;
@@ -402,3 +405,41 @@ btnAction.onclick = function () {
         setBtnIcon('play');
     }
 };
+
+//level encoded as DFA qPfx represents platform x
+const states = {
+    'qInit': {transitions: {'down': 'qPf2'}},
+    'qPf2': {transitions: {'down': 'qPf3', 'up': 'qInit'}},
+    'qPf3': {transitions: {'right': 'qPf4', 'up': 'qPf2'}},
+    'qPf4': {transitions: {'right': 'qPf5'}},
+    'qPf5': {transitions: {'right': 'qPf6'}},
+    'qPf6': {transitions: {'up': 'qPf7'}},
+    'qPf7': {transitions: {'up': 'qWin', 'down': 'qPf6'}},
+    'qWin': {transitions: {'down': 'qPf7'}},
+};
+
+class GameDFA {
+    constructor(states, initial, win) {
+        this.resetStates = states;
+        this.states = states;
+        this.initialState = initial;
+        this.winState = win;
+        this.currentState = initial;
+    }
+
+    readWord(w) {
+        if (this.states[this.currentState].transitions.hasOwnProperty(w)) {
+            this.currentState = this.states[this.currentState].transitions[w];
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    reset(hard) {
+        this.currentState = this.initialState;
+        if (hard === true) {
+            this.states = JSON.parse(JSON.stringify(this.resetStates));
+        }
+    }
+}

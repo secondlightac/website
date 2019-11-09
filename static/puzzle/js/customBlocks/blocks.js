@@ -1,7 +1,7 @@
 Blockly.Blocks['move'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("Springe nach")
+      .appendField("Gehe nach")
       .appendField(new Blockly.FieldDropdown([
         ["Unten", "down"],
         ["Rechts", "right"],
