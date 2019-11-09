@@ -17,12 +17,6 @@ titleClass: "heading"
             dich warten. Sammle deshalb das Schild unterwegs ein, um dich zu schützen. Dieses befindet sich jedoch
             zufällig auf Punkt A, B oder C.
         </p>
-        <p class="lead">
-            Die Regeln:
-        </p>
-        <ul>
-            <li>maximal 10 Blöcke</li>
-        </ul>
     </div>
 </div>
 
@@ -44,8 +38,7 @@ titleClass: "heading"
 
 <div class="row">
     <div class="col-md-12 order-md-1 order-2">
-        <button id="btn_Run" type="button" class="btn btn-primary"><i data-feather="play"></i></button>
-        <button id="btn_Reset" type="button" class="btn btn-secondary"><i data-feather="rotate-ccw"></i></button>
+        <button id="btn_Action" type="button" class="btn btn-primary" style="position:absolute; font-size: 1.2rem; z-index: 999"><span id="text_btnAction" style="padding-right: 5px;">Play</span><i data-feather="play"></i></button>
     </div>
     <div class="col-md-6 order-md-2 order-1">
         <div id="blocklyArea" style="height: 100%;">
@@ -58,19 +51,73 @@ titleClass: "heading"
 </div>
 
 <xml id="toolbox" style="display: none">
-    <category name="Blöcke" categorystyle="custom_game_category">
-        <block type="move"></block>
-        <block type="pickup"></block>
-        <block type="shieldNearby"></block>
-        <block type="controls_if"></block>
-        <block type="controls_repeat_ext">
-            <value name="TIMES">
-                <shadow type="math_number">
-                    <field name="NUM">3</field>
-                </shadow>
-            </value>
-        </block>
-    </category>
+    <block type="move"></block>
+    <block type="pickup"></block>
+    <block type="shieldNearby"></block>
+    <block type="controls_if"></block>
+    <block type="controls_repeat_ext">
+        <value name="TIMES">
+            <shadow type="math_number">
+                <field name="NUM">3</field>
+            </shadow>
+        </value>
+    </block>
+</xml>
+
+<xml id="startBlocks" style="display: none">
+    <block type="move">
+        <field name="direction">down</field>
+        <next>
+            <block type="move">
+                <field name="direction">down</field>
+            </block>
+        </next>
+    </block>
+</xml>
+
+<xml id="solutionBlocks" style="display: none;">
+    <block type="move">
+        <field name="direction">down</field>
+        <next>
+            <block type="move">
+                <field name="direction">down</field>
+                <next>
+                    <block type="controls_repeat_ext">
+                        <value name="TIMES">
+                            <shadow type="math_number">
+                                <field name="NUM">3</field>
+                            </shadow>
+                        </value>
+                        <statement name="DO">
+                            <block type="move">
+                                <field name="direction">right</field>
+                                <next>
+                                    <block type="controls_if">
+                                        <value name="IF0">
+                                            <block type="shieldNearby"></block>
+                                        </value>
+                                        <statement name="DO0">
+                                            <block type="pickup"></block>
+                                        </statement>
+                                    </block>
+                                </next>
+                            </block>
+                        </statement>
+                        <next>
+                            <block type="move">
+                                <field name="direction">up</field>
+                                <next>
+                                    <block type="move">
+                                        <field name="direction">up</field>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
 </xml>
 
 <script src="lib/blockly/blockly_compressed.js"></script>
