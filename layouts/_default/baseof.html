@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="IT4Kids | IT-Kurse für Grundschulen">
-    <meta property="og:url" content="https://it-for-kids.org">
-    <meta name="description" content="IT4Kids bietet spielerische IT-Kurse für Grundschulen, die Logik- und Prozess-Denken stärken.">
-    <meta property="og:description" content="IT4Kids bietet spielerische IT-Kurse für Grundschulen, die Logik- und Prozess-Denken stärken.">
-    <meta property="og:image" content="https://it-for-kids.org/img/ms-icon-310x310.png">
-    <meta property="og:locale" content="de_DE">
-        {{ partial "header.html" . }}
-        {{ block "meta" . }}{{ end }}
-        {{ block "style" . }}{{ end }}
-    </head>
-	<body>
-        {{ partial "navbar.html" . }}
-		<div class="pt-0 pt-md-5" style="margin-top: 100px">
-            {{ block "main" . }}{{ end }}
-        </div>
-        {{ partial "footer.html" . }}
-        {{ block "script" . }}{{ end }}
-	</body>
+<head>
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+
+    {{ partial "header.html" . }}
+    {{ block "meta" . }}{{ end }}
+    {{ block "style" . }}{{ end }}
+</head>
+<body>
+{{ partial "navbar.html" . }}
+<div class="pt-0 pt-md-5" style="margin-top: 100px">
+    {{ block "main" . }}{{ end }}
+</div>
+{{ partial "footer.html" . }}
+{{ block "script" . }}{{ end }}
+</body>
 </html>
