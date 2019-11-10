@@ -76,3 +76,6 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
   facebook = "https://www.facebook.com/itforkids.org/"
   instagram = "https://www.instagram.com/it4kids.ac/"
   enactus = "https://enactus.de/aachen/"
+  title = "IT4Kids | IT-Kurse für Grundschulen"
+  images = ["/img/ms-icon-310x310.png"]
+  description = "IT4Kids bietet spielerische IT-Kurse für Grundschulen, die Logik- und Prozess-Denken stärken."

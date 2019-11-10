@@ -3,7 +3,8 @@
 <head>
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
-
+    <meta property="og:url" content="https://it-for-kids.org">
+    <meta property="og:locale" content="de_DE">
     {{ partial "header.html" . }}
     {{ block "meta" . }}{{ end }}
     {{ block "style" . }}{{ end }}
