@@ -360,9 +360,7 @@ aside.sidebar .single h3.side-title:after {
     background: none;
     border: none;
 }
-.single.contact-info li {
-    margin-top: 30px;
-}
+
 .single.contact-info li .icon {
     display: block;
     float: left;
