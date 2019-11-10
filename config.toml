@@ -1,6 +1,6 @@
 baseURL = "https://it-for-kids.org/"
 languageCode = "de-de"
-title = "IT4Kids"
+title = "IT4Kids | IT-Kurse für Grundschulen"
 
 copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(new Date().getFullYear())</script> IT4Kids</span>"
 
