@@ -1,5 +1,5 @@
 ---
-title: Status für Partner HJ1 2019
+title: Status für Partner 2019 HJ1
 description: "Dank starken Partnern haben wir 1200 Kids Zugang zu digitaler Bildung geben können.
 date: 2019-06-01T00:00:00+00:00
 startDate: 2019-01-01T00:00:00+00:00
