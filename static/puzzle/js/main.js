@@ -52,7 +52,7 @@ class GameEngine {
         this.holdingShield = false;
         this.dfa = new GameDFA(states, 'qInit', 'qWin');
         this.running = false;
-        this.halted = false;
+        this.started = false;
         this.animT = null;
         this.process = 0;
         this.offset = 0;
@@ -157,8 +157,6 @@ class GameEngine {
     //display a message on the center of the canvas
     displayMessage(msg, color) {
         noLoop();
-        this.halted = true;
-        setBtnIcon('rotate-ccw');
         setTimeout(() => {
             filter(BLUR, 3);
             filter(GRAY);
@@ -203,10 +201,10 @@ class GameEngine {
 
     //start process
     start() {
-        if (!this.running) {
-            this.running = true;
-            this.process = setInterval(this.run.bind(this), 500);
-        }
+        this.running = true;
+        this.process = setInterval(this.run.bind(this), 500);
+        setBtnIcon('rotate-ccw');
+        game.started = true;
     }
 
     //stop process and animation
@@ -227,8 +225,9 @@ class GameEngine {
     reset() {
         loop();
         this.stop();
+        setBtnIcon('play');
+        this.started = false;
         this.holdingShield = false;
-        this.halted = false;
         this.player.position.x = this.offset + 62 * this.factor;
         this.player.position.y = this.offset + 130 * this.factor;
         this.shield.position.x = this.offset + 182 * this.factor + (Math.floor(Math.random() * 3 + 1) - 1) * 120 * this.factor;
@@ -397,12 +396,10 @@ window.onload = function (e) {
 
 let btnAction = document.getElementById('btn_Action');
 btnAction.onclick = function () {
-    const halted = game.halted;
-    game.reset();
-    if (!halted) {
-        game.execute();
+    if (game.started) {
+        game.reset();
     } else {
-        setBtnIcon('play');
+        game.execute();
     }
 };
 
