@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-4">
         <div class="col">
             {{ $pages := slice }}
             {{ range $index,$value := (where .Site.RegularPages "Section" "blog") }}
@@ -129,11 +129,26 @@
     {{ if .Content }}
     <div class="row mb-4">
         <div class="col">
-            <h2>Detailbericht</h2>
+            <h3>Detailbericht</h3>
             {{ .Content }}
         </div>
     </div>
     {{ end }}
+
+    <div class="row">
+        <div class="col text-center">
+            <h2>Unsere Partner</h2>
+            <div class="row my-auto">
+                <div class="col-6 p-4">
+                    <img src="{{ `/img/partner/lancom.png` | relURL }}" class="img-fluid" alt="LANCOM Systems">
+                </div>
+                <div class="col-6">
+                    <img src="{{ `/img/partner/INFORM_RGB_Hintergrund-transparent.svg` | relURL }}" class="img-fluid" alt="INFORM">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <script>

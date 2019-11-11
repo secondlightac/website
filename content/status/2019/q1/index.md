@@ -1,5 +1,6 @@
 ---
-title: "Status für Partner 2019 Q1 & Q2"
+title: "IT4Kids: Neues für Partner"
+description: "Dank starken Partnern haben wir 1200 Kids Zugang zu digitaler Bildung geben können."
 date: 2019-06-01T00:00:00+00:00
 startDate: 2019-01-01T00:00:00+00:00
 draft: false
