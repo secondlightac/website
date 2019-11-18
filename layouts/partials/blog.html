@@ -9,7 +9,7 @@
             </p>
         </div>
         <div class="row">
-            {{ range first 3 (where .Data.Pages "Section" "blog") }}
+            {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
                 {{ partial "blogCard.html" . }}
             {{ end }}
         </div>

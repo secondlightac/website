@@ -14,7 +14,7 @@
     </div>
 
     <div class="row">
-        {{ range .Data.Pages.ByTitle  }}
+        {{ range .Pages.ByTitle  }}
             {{ partial "projectCard.html" . }}
         {{ end }}
     </div>

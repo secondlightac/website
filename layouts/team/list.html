@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="row pb-5 pt-4">
-        {{ range where .Data.Pages "Params.leader" true }}
+        {{ range where .Pages "Params.leader" true }}
             {{ partial "teamCardLeader.html" . }}
         {{ end }}
     </div>
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="row pb-5 pt-4">
-        {{ range where .Data.Pages "Params.leader" false }}
+        {{ range where .Pages "Params.leader" false }}
             {{ partial "teamCard.html" . }}
         {{ end }}
     </div>
