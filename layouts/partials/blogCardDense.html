@@ -3,7 +3,7 @@
     <article class="card h-100">
             <div class="row no-gutters h-100">
                 <div class="col-4">
-                    <a href="{{ .URL }}">
+                    <a href="{{ .RelPermalink }}">
                         {{ with $img }}
                         <div class="h-100 w-100"
                              style="background-image: url({{ .RelPermalink }});
@@ -23,14 +23,14 @@
                     </div>
                 </div>
                 <div class="d-none d-lg-block col-md-2 my-auto">
-                    <a href="{{ .URL }}" class="btn btn-primary  pull-right">Mehr</a>
+                    <a href="{{ .RelPermalink }}" class="btn btn-primary  pull-right">Mehr</a>
                 </div>
             </div>
             <div class="d-block d-lg-none card-footer">
                 <span class="text-muted my-auto">
                     <time datetime="{{ .Params.Date }}">{{ .Date.Format "01.01.2006" }}</time>
                 </span>
-                <a href="{{ .URL }}" class="btn btn-sm btn-primary float-right">Weiterlesen</a>
+                <a href="{{ .RelPermalink }}" class="btn btn-sm btn-primary float-right">Weiterlesen</a>
             </div>
     </article>
 </div>
