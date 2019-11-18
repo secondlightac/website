@@ -57,7 +57,7 @@ window.addEventListener('load', function() {
     var softwareDemoButton = $('#loadDemoButton');
     softwareDemoButton.click(function() {
         softwareDemoButton.remove()
-        softwareDemoContainer.append('<iframe id="softwareDemo" src="https://it4kids.github.io/blockster/" style="background: white; width: 100%;height: 600px;border: none;"></iframe>');
+        softwareDemoContainer.append('<iframe id="softwareDemo" src="https://it4kids.github.io/Cubi/" style="background: white; width: 100%;height: 600px;border: none;"></iframe>');
     });
 })
 </script>
