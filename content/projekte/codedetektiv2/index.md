@@ -7,4 +7,4 @@ links:
      url: https://scratch.mit.edu/projects/305759601
 ---
 
-Finde die zwei Fehler aus dem Projekt Labyrinth und lerne dabei etwas über die Fehlersuche.
+Finde die beiden Fehler aus dem Projekt Autorennen und werde zum Fehlersuch-Experten.

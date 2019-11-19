@@ -7,4 +7,4 @@ links:
      url: https://scratch.mit.edu/projects/304198496
 ---
 
-Finde die zwei Fehler aus dem Projekt Labyrinth und lerne dabei etwas über die Fehlersuche.
+Bist du ein echter Codedetektiv und findest alle Fehler, die sich im Projekt Aquarium versteckt haben?
