@@ -1,5 +1,7 @@
 {{ define "main" }}
+{{ if not .Params.nocontainer }}
 <div class="container">
+{{end}}
     <div class="row mb-4">
         <div class="col-12 text-center">
             <h3 class="{{ if .Params.titleClass }} {{ .Params.titleClass }}{{ end }}">{{ .Title }}</h3>
@@ -15,5 +17,7 @@
     </div>
     {{ end }}
     {{ .Content }}
+{{ if not .Params.nocontainer }}
 </div>
+{{ end }}
 {{ end }}
