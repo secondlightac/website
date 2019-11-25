@@ -403,6 +403,26 @@ btnAction.onclick = function () {
     }
 };
 
+let tutorialCompleted = false;
+
+function checkTutorial() {
+    let block = ws.getBlockById('block_down_2');
+    if (block.parentBlock_ !== null) {
+        ws.getCommentById('comment_tutorial').dispose();
+        tutorialCompleted = true;
+    }
+}
+
+onChange = (event) => {
+    if (event.type  === Blockly.Events.BLOCK_MOVE) {
+        if (!tutorialCompleted) {
+            checkTutorial();
+        }
+    }
+};
+
+ws.addChangeListener(onChange);
+
 //level encoded as DFA qPfx represents platform x
 const states = {
     'qInit': {transitions: {'down': 'qPf2'}},

@@ -38,7 +38,10 @@ titleClass: "heading"
 
 <div class="row">
     <div class="col-md-12 order-md-1 order-2">
-        <button id="btn_Action" type="button" class="btn btn-primary" style="position:absolute; font-size: 1.2rem; z-index: 999"><span id="text_btnAction" style="padding-right: 5px;">Play</span><i data-feather="play"></i></button>
+        <button id="btn_Action" type="button" class="btn btn-primary"
+                style="position:absolute; font-size: 1.2rem; z-index: 999"><span id="text_btnAction"
+                                                                                 style="padding-right: 5px;">Play</span><i
+                data-feather="play"></i></button>
     </div>
     <div class="col-md-6 order-md-2 order-1">
         <div id="blocklyArea" style="height: 100%;">
@@ -65,13 +68,12 @@ titleClass: "heading"
 </xml>
 
 <xml id="startBlocks" style="display: none">
-    <block type="move">
+    <comment id="comment_tutorial" x="5" y="5" h="70" w="170">Versuche beide Blöcke aneinander zu stecken</comment>
+    <block id="block_down_1" x="5" y="85" type="move">
         <field name="direction">down</field>
-        <next>
-            <block type="move">
-                <field name="direction">down</field>
-            </block>
-        </next>
+    </block>
+    <block id="block_down_2" x="5" y="125" type="move">
+        <field name="direction">down</field>
     </block>
 </xml>
 
