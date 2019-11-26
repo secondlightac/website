@@ -8,6 +8,9 @@ let img_bg;
 let img_player;
 let img_shield;
 let game = null;
+let tutorialCompleted = false;
+let firstStart = true;
+let solutionLoaded = false;
 
 //load images
 function preload() {
@@ -192,6 +195,7 @@ class GameEngine {
         document.getElementById('exercise_won').classList.remove('d-none');
         window.scrollTo(0, 0);
         this.displayMessage('Level geschafft!', '#7bc950');
+        registerEvent('levelCompleted');
     }
 
     lose() {
@@ -205,6 +209,11 @@ class GameEngine {
         this.process = setInterval(this.run.bind(this), 500);
         setBtnIcon('rotate-ccw');
         game.started = true;
+        if (!solutionLoaded && firstStart && tutorialCompleted) {
+            firstStart = false;
+            ws.getCommentById('comment_tutorial').dispose();
+            registerEvent('startedLevel');
+        }
     }
 
     //stop process and animation
@@ -234,6 +243,16 @@ class GameEngine {
         this.shield.position.y = this.offset + 396 * this.factor;
     }
 }
+
+let btnAction = document.getElementById('btn_Action');
+btnAction.onclick = function () {
+    if (game.started) {
+        game.reset();
+    } else {
+        game.execute();
+    }
+};
+btnAction.hidden = true;
 
 let blockStyles = {
     'custom_control_blocks': {
@@ -289,6 +308,8 @@ function loadWorkspace(id) {
 
 if (parseInt(new URL(window.location).searchParams.get('solution'))) {
     loadWorkspace('solutionBlocks');
+    btnAction.hidden = false;
+    solutionLoaded = true;
 } else {
     loadWorkspace('startBlocks');
 }
@@ -394,34 +415,39 @@ window.onload = function (e) {
     }, 300);
 };
 
-let btnAction = document.getElementById('btn_Action');
-btnAction.onclick = function () {
-    if (game.started) {
-        game.reset();
-    } else {
-        game.execute();
-    }
-};
-
-let tutorialCompleted = false;
-
 function checkTutorial() {
     let block = ws.getBlockById('block_down_2');
     if (block.parentBlock_ !== null) {
-        ws.getCommentById('comment_tutorial').dispose();
         tutorialCompleted = true;
+        btnAction.hidden = false;
+        if (isMobile) {
+            ws.getCommentById('comment_tutorial').setContent('Klicke jetzt unten auf Play ►');
+        } else {
+            ws.getCommentById('comment_tutorial').setContent('Klicke jetzt rechts auf Play ►');
+        }
+        registerEvent('tutorialCompleted');
     }
 }
 
 onChange = (event) => {
-    if (event.type  === Blockly.Events.BLOCK_MOVE) {
-        if (!tutorialCompleted) {
+    if (event.type === Blockly.Events.BLOCK_MOVE) {
+        if (!solutionLoaded && !tutorialCompleted) {
             checkTutorial();
         }
     }
 };
 
 ws.addChangeListener(onChange);
+
+//Google Analytics
+function registerEvent(action) {
+    return;
+    if (!solutionLoaded) {
+        gtag('event', action, {
+            'event_category': 'game'
+        });
+    }
+}
 
 //level encoded as DFA qPfx represents platform x
 const states = {
