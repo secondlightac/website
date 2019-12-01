@@ -32,9 +32,9 @@ function setup() {
     let player = createSprite(62, 130);
     player.addImage(img_player);
     player.scale = 0.7;
-    let shield = createSprite(182, 396);
+    let shield = createSprite(182, 408);
     shield.addImage(img_shield);
-    shield.scale = 0.6;
+    shield.scale = 0.7;
     shield.position.x = 182 + (Math.floor(Math.random() * 3 + 1) - 1) * 120;
     background(img_bg);
     game = new GameEngine(player, shield);
@@ -77,8 +77,8 @@ class GameEngine {
             this.player.position.y = this.offset + 130 * this.factor;
             this.player.scale = 0.7 * this.factor;
             this.shield.position.x = this.offset + 182 * this.factor + (Math.floor(Math.random() * 3 + 1) - 1) * 120 * this.factor;
-            this.shield.position.y = this.offset + 396 * this.factor;
-            this.shield.scale = 0.6 * this.factor;
+            this.shield.position.y = this.offset + 410 * this.factor;
+            this.shield.scale = 0.7 * this.factor;
             loop();
         }
 
@@ -142,7 +142,7 @@ class GameEngine {
                         break;
                     case 'pickup':
                         this.holdingShield = true;
-                        this.shield.position.y -= 46 * this.factor;
+                        this.shield.position.y -= 58 * this.factor;
                         break;
                 }
             } else {
@@ -240,7 +240,7 @@ class GameEngine {
         this.player.position.x = this.offset + 62 * this.factor;
         this.player.position.y = this.offset + 130 * this.factor;
         this.shield.position.x = this.offset + 182 * this.factor + (Math.floor(Math.random() * 3 + 1) - 1) * 120 * this.factor;
-        this.shield.position.y = this.offset + 396 * this.factor;
+        this.shield.position.y = this.offset + 408 * this.factor;
     }
 }
 
