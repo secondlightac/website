@@ -8,6 +8,9 @@ let img_bg;
 let img_player;
 let img_shield;
 let game = null;
+let tutorialCompleted = false;
+let firstStart = true;
+let solutionLoaded = false;
 
 //load images
 function preload() {
@@ -29,9 +32,9 @@ function setup() {
     let player = createSprite(62, 130);
     player.addImage(img_player);
     player.scale = 0.7;
-    let shield = createSprite(182, 396);
+    let shield = createSprite(182, 408);
     shield.addImage(img_shield);
-    shield.scale = 0.6;
+    shield.scale = 0.7;
     shield.position.x = 182 + (Math.floor(Math.random() * 3 + 1) - 1) * 120;
     background(img_bg);
     game = new GameEngine(player, shield);
@@ -74,8 +77,8 @@ class GameEngine {
             this.player.position.y = this.offset + 130 * this.factor;
             this.player.scale = 0.7 * this.factor;
             this.shield.position.x = this.offset + 182 * this.factor + (Math.floor(Math.random() * 3 + 1) - 1) * 120 * this.factor;
-            this.shield.position.y = this.offset + 396 * this.factor;
-            this.shield.scale = 0.6 * this.factor;
+            this.shield.position.y = this.offset + 410 * this.factor;
+            this.shield.scale = 0.7 * this.factor;
             loop();
         }
 
@@ -139,7 +142,7 @@ class GameEngine {
                         break;
                     case 'pickup':
                         this.holdingShield = true;
-                        this.shield.position.y -= 46 * this.factor;
+                        this.shield.position.y -= 58 * this.factor;
                         break;
                 }
             } else {
@@ -192,6 +195,7 @@ class GameEngine {
         document.getElementById('exercise_won').classList.remove('d-none');
         window.scrollTo(0, 0);
         this.displayMessage('Level geschafft!', '#7bc950');
+        registerEvent('levelCompleted');
     }
 
     lose() {
@@ -205,6 +209,11 @@ class GameEngine {
         this.process = setInterval(this.run.bind(this), 500);
         setBtnIcon('rotate-ccw');
         game.started = true;
+        if (!solutionLoaded && firstStart && tutorialCompleted) {
+            firstStart = false;
+            ws.getCommentById('comment_tutorial').dispose();
+            registerEvent('startedLevel');
+        }
     }
 
     //stop process and animation
@@ -231,9 +240,19 @@ class GameEngine {
         this.player.position.x = this.offset + 62 * this.factor;
         this.player.position.y = this.offset + 130 * this.factor;
         this.shield.position.x = this.offset + 182 * this.factor + (Math.floor(Math.random() * 3 + 1) - 1) * 120 * this.factor;
-        this.shield.position.y = this.offset + 396 * this.factor;
+        this.shield.position.y = this.offset + 408 * this.factor;
     }
 }
+
+let btnAction = document.getElementById('btn_Action');
+btnAction.onclick = function () {
+    if (game.started) {
+        game.reset();
+    } else {
+        game.execute();
+    }
+};
+btnAction.hidden = true;
 
 let blockStyles = {
     'custom_control_blocks': {
@@ -289,6 +308,8 @@ function loadWorkspace(id) {
 
 if (parseInt(new URL(window.location).searchParams.get('solution'))) {
     loadWorkspace('solutionBlocks');
+    btnAction.hidden = false;
+    solutionLoaded = true;
 } else {
     loadWorkspace('startBlocks');
 }
@@ -394,14 +415,39 @@ window.onload = function (e) {
     }, 300);
 };
 
-let btnAction = document.getElementById('btn_Action');
-btnAction.onclick = function () {
-    if (game.started) {
-        game.reset();
-    } else {
-        game.execute();
+function checkTutorial() {
+    let block = ws.getBlockById('block_down_2');
+    if (block.parentBlock_ !== null) {
+        tutorialCompleted = true;
+        btnAction.hidden = false;
+        if (isMobile) {
+            ws.getCommentById('comment_tutorial').setContent('Klicke jetzt unten auf Play ►');
+        } else {
+            ws.getCommentById('comment_tutorial').setContent('Klicke jetzt rechts auf Play ►');
+        }
+        registerEvent('tutorialCompleted');
+    }
+}
+
+onChange = (event) => {
+    if (event.type === Blockly.Events.BLOCK_MOVE) {
+        if (!solutionLoaded && !tutorialCompleted) {
+            checkTutorial();
+        }
     }
 };
+
+ws.addChangeListener(onChange);
+
+//Google Analytics
+function registerEvent(action) {
+    return;
+    if (!solutionLoaded) {
+        gtag('event', action, {
+            'event_category': 'game'
+        });
+    }
+}
 
 //level encoded as DFA qPfx represents platform x
 const states = {

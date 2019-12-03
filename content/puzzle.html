@@ -12,10 +12,11 @@ titleClass: "heading"
             Die Aufgabe:
         </p>
         <p>
-            Du bist auf Entdeckungsreise und suchst nach einem verborgenen Schatz. Erreiche den Eingang <span
-                style="font-style: italic">(helle Fläche)</span> zur Pyramide. Doch Vorsicht! Es könnten Gefahren auf
+            Du bist auf Entdeckungsreise und suchst nach einem verborgenen Schatz. Erreiche die Pyramide um dort deine
+            Suche zu beginnen.
+            Doch Vorsicht! Es könnten Gefahren auf
             dich warten. Sammle deshalb das Schild unterwegs ein, um dich zu schützen. Dieses befindet sich jedoch
-            zufällig auf Punkt A, B oder C.
+            <span style="font-weight: bold">zufällig</span> in Truhe A, B oder C.
         </p>
     </div>
 </div>
@@ -38,7 +39,10 @@ titleClass: "heading"
 
 <div class="row">
     <div class="col-md-12 order-md-1 order-2">
-        <button id="btn_Action" type="button" class="btn btn-primary" style="position:absolute; font-size: 1.2rem; z-index: 999"><span id="text_btnAction" style="padding-right: 5px;">Play</span><i data-feather="play"></i></button>
+        <button id="btn_Action" type="button" class="btn btn-primary"
+                style="position:absolute; font-size: 1.2rem; z-index: 999"><span id="text_btnAction"
+                                                                                 style="padding-right: 5px;">Play</span><i
+                data-feather="play"></i></button>
     </div>
     <div class="col-md-6 order-md-2 order-1">
         <div id="blocklyArea" style="height: 100%;">
@@ -65,13 +69,12 @@ titleClass: "heading"
 </xml>
 
 <xml id="startBlocks" style="display: none">
-    <block type="move">
+    <comment id="comment_tutorial" x="5" y="5" h="70" w="170">Versuche beide Blöcke aneinander zu ziehen</comment>
+    <block id="block_down_1" x="5" y="90" type="move">
         <field name="direction">down</field>
-        <next>
-            <block type="move">
-                <field name="direction">down</field>
-            </block>
-        </next>
+    </block>
+    <block id="block_down_2" x="5" y="150" type="move">
+        <field name="direction">down</field>
     </block>
 </xml>
 
