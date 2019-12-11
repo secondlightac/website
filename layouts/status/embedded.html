@@ -138,20 +138,9 @@
     <div class="row">
         <div class="col text-center">
             <h2>Unsere Partner</h2>
-            <div class="row my-auto">
-                <div class="col-4 p-4 my-auto">
-                    <img src="{{ `/img/partner/lancom.png` | relURL }}" class="img-fluid" alt="LANCOM Systems">
-                </div>
-                <div class="col-4 p-0 my-auto">
-                    <img src="{{ `/img/partner/INFORM_RGB_Hintergrund-transparent.svg` | relURL }}" class="img-fluid" alt="INFORM">
-                </div>
-                <div class="col-4 p-4 my-auto">
-                    <img src="{{ `/img/partner/arkadia.jpg` | relURL }}" class="img-fluid" alt="Arkadia Management Consultants">
-                </div>
-            </div>
+            {{ partial "partnerSlider.html" .}}
         </div>
     </div>
-
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script>
