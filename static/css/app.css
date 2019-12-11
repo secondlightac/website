@@ -438,3 +438,8 @@ aside.sidebar .single h3.side-title:after {
         padding: 0 10% 0 10%;
     }
 }
+
+
+.img-comic {
+    box-shadow: 0px 0px 5px black;
+}
