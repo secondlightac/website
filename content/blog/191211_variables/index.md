@@ -1,6 +1,6 @@
 ---
 title: "Variablen und ihr Zuhause"
-date: 2019-12-13T11:00:00+00:00
+date: 2019-12-11T11:00:00+00:00
 draft: false
 author: "Amelie Loevenich"
 partnerFeatured: false
