@@ -2,7 +2,7 @@
 title: "IT4Kids bald in allen Aachener Grundschulen"
 date: 2019-12-04T11:00:00+00:00
 draft: false
-author: "Fynn Mazurkiewicz"
+author: "Andrea Thiele"
 partnerFeatured: true
 ---
 „Jedem Kind Zugang zu digitaler Bildung geben“ – das ist unsere Vision. Und nun sind wir dieser Vision einen großen
