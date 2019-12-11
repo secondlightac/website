@@ -3,7 +3,7 @@
     <div class="card h-100">
         {{ if $img }}
         {{ with $img }}
-        <div style="height:150px;overflow:hidden"><img class="card-img-top" src="{{ .RelPermalink }}" alt="Post Image"></div>
+        <div class="d-flex align-items-center" style="height:150px;overflow:hidden"><div><img class="card-img-top" src="{{ .RelPermalink }}" alt="Post Image"></div></div>
         {{ end }}
         {{ else }}
         <div style="padding: 10px; padding-top: 30px; height:150px;overflow:hidden"><img class="card-img-top" src="{{ `/img/logo.svg` | relURL }}" alt="Post Image"></div>
