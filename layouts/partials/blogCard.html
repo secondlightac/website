@@ -10,7 +10,7 @@
         {{ end }}
         <div class="card-body">
             <h4 class="card-title">{{ .Title }}</h4>
-            <p class="card-text">{{ truncate 100 .Content }}</p>
+            <p class="card-text">{{ truncate 100 .Content | plainify }}</p>
         </div>
         <div class="card-footer">
             <a href="{{ .RelPermalink }}" class="btn btn-primary">Weiterlesen</a>
