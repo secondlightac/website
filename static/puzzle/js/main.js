@@ -441,7 +441,6 @@ ws.addChangeListener(onChange);
 
 //Google Analytics
 function registerEvent(action) {
-    return;
     if (!solutionLoaded) {
         gtag('event', action, {
             'event_category': 'game'
