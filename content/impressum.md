@@ -11,7 +11,7 @@ Kackertstraße 7 \
 52072 Aachen \
 Sitz des Vereins ist Aachen \
 Registergericht Amtsgericht Aachen \
-VR 5449 \
+VR 5449
 
 **Bei weiteren Fragen oder Problemen steht Ihnen gerne unserer vertretungsberechtigter Vorstand als Kontakt zur Verfügung:**
 
