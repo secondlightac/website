@@ -1,33 +1,41 @@
 {{ $img := .Resources.GetMatch "image.*" }}
 <div class="col-md-6 mb-2">
     <article class="card h-100">
-            <div class="row no-gutters h-100">
-                <div class="col-4">
-                    <a href="{{ .RelPermalink }}">
-                        {{ with $img }}
-                        <div class="h-100 w-100"
-                             style="background-image: url({{ .RelPermalink }});
+        <div class="row no-gutters h-100">
+            <div class="col-4">
+                <a href="{{ .RelPermalink }}">
+                    {{ if $img }}
+                    {{ with $img }}
+                    <div class="h-100 w-100"
+                         style="background-image: url({{ .RelPermalink }});
                      background-size: cover;
                      background-repeat: no-repeat;
                      background-position: center center;"></div>
-                        {{ end }}
-                    </a>
-                </div>
-                <div class="col-8 col-md-8">
-                    <div class="card-body p-2">
-                        <h5 class="card-title m-1">{{ .Title }}</h5>
-                        <div class="m-1 card-text d-none d-lg-block text-muted">
-                            {{ .Date.Format "01.01.2006" }}
-                        </div>
-
+                    {{ end }}
+                    {{ else }}
+                    <div class="h-100 w-100"
+                         style="background-image: url({{ `/img/logo.svg` | relURL }});
+                     background-size: contain;
+                     background-repeat: no-repeat;
+                     background-position: center center;"></div>
+                    {{ end }}
+                </a>
+            </div>
+            <div class="col-8 col-md-8">
+                <div class="card-body p-2">
+                    <h5 class="card-title m-1">{{ .Title }}</h5>
+                    <div class="m-1 card-text d-none d-lg-block text-muted">
+                        {{ dateFormat "01.02.2006" .Date}}
                     </div>
+
                 </div>
             </div>
-            <div class="card-footer">
+        </div>
+        <div class="card-footer">
                 <span class="text-muted d-lg-none my-auto">
-                    <time datetime="{{ .Params.Date }}">{{ .Date.Format "01.01.2006" }}</time>
+                    <time datetime="{{ .Params.Date }}"> {{ dateFormat "01.02.2006" .Date}}</time>
                 </span>
-                <a href="{{ .RelPermalink }}" class="btn btn-sm btn-primary float-right">Weiterlesen</a>
-            </div>
+            <a href="{{ .RelPermalink }}" class="btn btn-sm btn-primary float-right">Weiterlesen</a>
+        </div>
     </article>
 </div>
