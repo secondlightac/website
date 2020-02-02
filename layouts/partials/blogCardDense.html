@@ -22,12 +22,9 @@
 
                     </div>
                 </div>
-                <div class="d-none d-lg-block col-md-2 my-auto">
-                    <a href="{{ .RelPermalink }}" class="btn btn-primary  pull-right">Mehr</a>
-                </div>
             </div>
-            <div class="d-block d-lg-none card-footer">
-                <span class="text-muted my-auto">
+            <div class="card-footer">
+                <span class="text-muted d-lg-none my-auto">
                     <time datetime="{{ .Params.Date }}">{{ .Date.Format "01.01.2006" }}</time>
                 </span>
                 <a href="{{ .RelPermalink }}" class="btn btn-sm btn-primary float-right">Weiterlesen</a>
