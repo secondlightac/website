@@ -1,5 +1,7 @@
 ---
 title: "Wer steckt eigentlich hinter IT4Kids?"
+_build:
+  render: true
 cascade:
   _build:
     render: false
