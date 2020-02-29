@@ -13,16 +13,14 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.62.1'
+        hugo-version: '0.65.0'
 
     - name: Build
       run: hugo
 
     - name: Deploy
-      env:
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
-      run: |
-        wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
-        bash ./entrypoint.sh
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./public
