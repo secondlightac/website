@@ -23,7 +23,7 @@ draft: false
             Um einen an jedes Kind angepassten Lernfortschritt zu ermöglichen, sind unsere Lektionen in „Level“ unterteilt. Ähnlich zu Videospielen muss immer erst das aktuelle Level beendet werden, bevor mit dem nächsten begonnen werden kann. Auf diese Weise können wir nach und nach neue Inhalte, Funktionen und Konzepte dazu nehmen, ohne direkt mit zu vielen Neuerungen zu überfordern.
         </p>
         <p>
-            Der Tutor oder der Lehrer, der den Kurs durchführt, erhält von uns ein Handbuch, das Kapitel für Kapitel alle Level erläutert und so eine optimale Vorbereitung auf die Unterrichtseinheit garantiert.
+            Der Kursleiter oder der Lehrer, der den Kurs durchführt, erhält von uns ein Handbuch, das Kapitel für Kapitel alle Level erläutert und so eine optimale Vorbereitung auf die Unterrichtseinheit garantiert.
         </p>
     </div>
 </div>
