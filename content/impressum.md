@@ -4,26 +4,17 @@ date: 2018-06-22T19:52:26+02:00
 draft: false
 ---
 
-#### Enactus Aachen e.V.
+#### IT4Kids e.V.
 
-c/o WIN Lehrstuhl \
-Kackertstraße 7 \
+Adalbertstraße 37 \
 52072 Aachen \
 Sitz des Vereins ist Aachen \
 Registergericht Amtsgericht Aachen \
-VR 5449
+VR 6008
 
-**Bei weiteren Fragen oder Problemen steht Ihnen gerne unserer vertretungsberechtigter Vorstand als Kontakt zur Verfügung:**
+Dieses Impressum gilt auch für folgende Social-Media-Auftritte:
 
-Externe Teamleitung: [Philipp Steiz](mailto:teamleitung@aachen.enactus.de) \
-Interne Teamleitung: [Madlen Merklinger](mailto:teamleitung@aachen.enactus.de)
-
-**Oder wenden Sie sich an unseren Führungskreis:**
-
-[info@aachen.enactus.de](mailto:info@aachen.enactus.de)
-
-Dieses Impressum gilt auch für folgende Social-Media-Auftritte des Enactus Teams der RWTH Aachen:
-
+- Instagram: https://www.instagram.com/it4kids.ac
 - Facebook: https://www.facebook.com/itforkids.org
 
 \
