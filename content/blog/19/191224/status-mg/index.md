@@ -15,9 +15,9 @@ Leider ist schon während der Kursleitersuche aufgefallen, dass die Resonanz der
 ist als gewohnt. Nachdem die ersten drei Pilotkurse nun vorbei sind und wir unsere Kursleiterzahl aufstocken wollten, wurde
 klar, dass wir in einigen Städten anders in den Dialog mit den Studenten treten müssen.
 
-In unserer Fehleranalyse sind wir vor allem darauf gestossen, dass die Hochschule in Mönchengladbach lediglich ein
-Ableger der Hochschule Krefeld ist. Daher befinden sich in der Stadt selber auch nur drei Fakultäten: Die Sozialwissenschaften,
-die BWL und die Textilverarbeitung. Alle drei Fakultäten zählen nicht zu den Hauptsegmenten, in die wir unsere Kursleitungen
+In unserer Fehleranalyse sind wir vor allem darauf gestoßen, dass die Hochschule in Mönchengladbach einer 
+von zwei Standorten der HS Niederrhein ist. 
+In der Stadt befinden sich daher auch nur drei Fakultäten: Sozialwissenschaften, BWL und Textilverarbeitung. Alle drei Fakultäten zählen nicht zu den Hauptsegmenten, in die wir unsere Kursleitungen
 für gewöhnlich einteilen.
 
 Wir sind weiterhin auf der Suche nach Studenten, die Lust haben IT4Kids am Standort Mönchengladbach aufzubauen.
