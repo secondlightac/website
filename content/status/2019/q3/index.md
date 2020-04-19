@@ -5,10 +5,10 @@ date: 2020-01-01T00:00:00+00:00
 startDate: 2019-06-01T00:00:00+00:00
 draft: false
 author: "IT4Kids"
-kidsCount: 1500
-customerCount: 25
-ogsCustomerCount: 18 
-regularCustomerCount: 2
+kidsCount: 2000
+customerCount: 30
+ogsCustomerCount: 19 
+regularCustomerCount: 6
 licensedCustomerCount: 3
 eventCustomerCount: 2
 stateCount: 2
