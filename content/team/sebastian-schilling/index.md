@@ -1,10 +1,8 @@
 ---
 title: "Sebastian Schilling"
-date: 2018-06-22T19:09:16+02:00
-draft: false
 sitemap_exclude: true
-leader: false
-weight: 10
+category: "leader"
+email: sebastian.schilling@it-for-kids.org
 ---
 
-Kursorganisation
+Leitung - Kursorganisation

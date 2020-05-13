@@ -1,10 +1,8 @@
 ---
 title: "Johanna Tolzmann"
-date: 2018-06-22T19:09:16+02:00
-draft: false
 sitemap_exclude: true
-leader: true
-weight: 200
+email: johanna.tolzmann@it-for-kids.org
+category: "leader"
 ---
 
 Leitung - Lehrkonzept

@@ -1,8 +1,7 @@
 ---
-title: "Alica Kukalla"
+title: "Daniel Oltmanns"
 sitemap_exclude: true
 category: "current"
-weight: 2
 ---
 
-Kursorganisation
+Software-Entwicklung

@@ -19,19 +19,30 @@
         </div>
     </div>
     <div class="row pb-5 pt-4">
-        {{ range where .Pages "Params.leader" true }}
+        {{ range where .Pages "Params.category" "leader"  }}
             {{ partial "teamCardLeader.html" . }}
         {{ end }}
     </div>
-    
+
     <div class="row">
         <div class="col-12 text-center">
             <h3 class="center">Team</h3>
         </div>
     </div>
     <div class="row pb-5 pt-4">
-        {{ range where .Pages "Params.leader" false }}
+        {{ range where .Pages "Params.category" "current" }}
             {{ partial "teamCard.html" . }}
+        {{ end }}
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3 class="center">Ehemalige Mitglieder</h3>
+        </div>
+    </div>
+    <div class="row pb-5 pt-4">
+        {{ range where .Pages "Params.category" "previous" }}
+            {{ partial "teamCardPrevious.html" . }}
         {{ end }}
     </div>
 </div>
