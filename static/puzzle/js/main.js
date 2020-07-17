@@ -1,6 +1,3 @@
-//initialize icons
-feather.replace();
-
 //check if client is on mobile device
 const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -152,7 +149,7 @@ class GameEngine {
             if (this.dfa.currentState === this.dfa.winState && this.holdingShield) {
                 game.win();
             } else {
-                this.stop();
+                game.lose();
             }
         }
     }
@@ -199,21 +196,19 @@ class GameEngine {
     }
 
     lose() {
+        const showFailure = !firstStart;
         this.stop();
-        this.displayMessage('Das war leider falsch!\nBitte zurücksetzen! ', '#f22b29');
+        if (showFailure) {
+            this.displayMessage('Das war leider falsch!\nBitte zurücksetzen! ', '#f22b29');
+        }
     }
 
     //start process
     start() {
         this.running = true;
         this.process = setInterval(this.run.bind(this), 500);
-        setBtnIcon('rotate-ccw');
+        setBtnIcon('undo');
         game.started = true;
-        if (!solutionLoaded && firstStart && tutorialCompleted) {
-            firstStart = false;
-            ws.getCommentById('comment_tutorial').dispose();
-            registerEvent('startedLevel');
-        }
     }
 
     //stop process and animation
@@ -227,6 +222,11 @@ class GameEngine {
             clearTimeout(this.animT);
             this.player.setVelocity(0, 0);
             this.shield.setVelocity(0, 0);
+        }
+        if (!solutionLoaded && firstStart && tutorialCompleted) {
+            firstStart = false;
+            ws.getCommentById('comment_tutorial').dispose();
+            registerEvent('startedLevel');
         }
     }
 
@@ -244,15 +244,15 @@ class GameEngine {
     }
 }
 
-let btnAction = document.getElementById('btn_Action');
-btnAction.onclick = function () {
+let btnAction = '#btn_Action'
+$(btnAction).click(function () {
     if (game.started) {
         game.reset();
     } else {
         game.execute();
     }
-};
-btnAction.hidden = true;
+});
+$(btnAction).hide();
 
 let blockStyles = {
     'custom_control_blocks': {
@@ -308,16 +308,18 @@ function loadWorkspace(id) {
 
 if (parseInt(new URL(window.location).searchParams.get('solution'))) {
     loadWorkspace('solutionBlocks');
-    btnAction.hidden = false;
+    $(btnAction).show();
     solutionLoaded = true;
+    tutorialCompleted = true;
+    firstStart = false;
 } else {
     loadWorkspace('startBlocks');
 }
 
 function onResize() {
-    let div = document.getElementById('blocklyDiv');
-    div.style.left = '0px';
-    div.style.top = '0px';
+    let div = '#blocklyDiv';
+    $(div).css('left', '0px');
+    $(div).css('top', '0px');
     let winWidth = window.innerWidth;
     let safeZone = 50;
     let newScale = 1;
@@ -326,39 +328,39 @@ function onResize() {
         safeZone = 30;
     }
     if (winWidth >= 1200) {
-        div.style.width = '540px';
-        div.style.height = '500px';
-        btnAction.style['left'] = 540 + 45 + 'px';
+        $(div).css('width', '540px');
+        $(div).css('height', '500px');
+        $(btnAction).css('left', 540 + 45 + 'px');
         if (game !== null) {
             game.resize(500);
         }
     } else if (winWidth >= 992) {
-        div.style.width = '450px';
-        div.style.height = '450px';
-        btnAction.style['left'] = 450 + 45 + 'px';
+        $(div).css('width', '450px');
+        $(div).css('height', '450px');
+        $(btnAction).css('left', 450 + 45 + 'px');
         if (game !== null) {
             game.resize(450);
         }
     } else if (winWidth >= 768) {
-        div.style.width = '350px';
-        div.style.height = '350px';
-        btnAction.style['left'] = 350 + 45 + 'px';
+        $(div).css('width', '350px');
+        $(div).css('height', '350px');
+        $(btnAction).css('left', 350 + 25 + 'px');
         if (game !== null) {
             game.resize(350);
         }
         newScale = 0.8;
     } else if (winWidth >= 576) {
-        div.style.width = '500px';
-        div.style.height = '500px';
-        btnAction.style['left'] = '15px';
+        $(div).css('width', '500px');
+        $(div).css('height', '500px');
+        $(btnAction).css('left', '15px');
         if (game !== null) {
             game.resize(500);
         }
         newScale = 0.9;
     } else {
-        div.style.width = winWidth - safeZone + 'px';
-        div.style.height = '350px';
-        btnAction.style['left'] = '15px';
+        $(div).css('width', winWidth - safeZone + 'px');
+        $(div).css('height', '350px');
+        $(btnAction).css('left', '15px');
         //working with a stack because resizing takes time. Last size from event will be used
         if (game !== null) {
             if (game.resizeStack.length === 0) {
@@ -384,28 +386,13 @@ function scaleTrashcan(factor) {
     ws.trashcan.svgGroup_.setAttribute('transform', newAttr);
 }
 
-let icons = {};
-
-function loadIcons(iconNames) {
-    const parser = new DOMParser();
-    iconNames.forEach(function (icon) {
-        icons[icon] = parser.parseFromString(feather.icons[icon].toSvg(), 'image/svg+xml').documentElement;
-    });
-}
-
-loadIcons(['play', 'rotate-ccw']);
-
-function setBtnIcon(iconName) {
-    btnAction.childNodes[1].replaceWith(icons[iconName]);
-    let text = '';
-    switch (iconName) {
-        case 'play':
-            text = 'Play';
-            break;
-        case 'rotate-ccw':
-            text = 'Reset';
+function setBtnIcon(icon) {
+    $(btnAction).find('i.fa').removeClass('fa-play').removeClass('fa-undo').addClass('fa-' + icon)
+    if (icon === 'play') {
+        $('#text_btnAction').text('Play');
+    } else {
+        $('#text_btnAction').text('Reset');
     }
-    document.getElementById('text_btnAction').innerHTML = text;
 }
 
 window.addEventListener('resize', onResize, false);
@@ -419,7 +406,7 @@ function checkTutorial() {
     let block = ws.getBlockById('block_down_2');
     if (block.parentBlock_ !== null) {
         tutorialCompleted = true;
-        btnAction.hidden = false;
+        $(btnAction).show();
         if (isMobile) {
             ws.getCommentById('comment_tutorial').setContent('Klicke jetzt unten auf Play ►');
         } else {

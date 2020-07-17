@@ -1,0 +1,43 @@
+{{ define "main" }}
+<script src="lib/reorganize.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h5>Sortieren:</h5>
+            <button id="btnSortName" class="btn btn-filter selected" type="button" onclick="sortName()">
+                Alphabetisch
+                <i class="fa fa-level-down-alt fa-lg"></i>
+            </button>
+            <button id="btnSortSkill" class="btn btn-filter" type="button" onclick="sortSkill()">
+                Schwierigkeit
+                <i class="fa fa-level-down-alt fa-lg"></i>
+            </button>
+        </div>
+        <div class="col-6">
+            <h5>Filtern:</h5>
+            <button id="btnFilterCubi" class="btn btn-filter" type="button" onclick="filterApp('cubi')">
+                Cubi
+                <i class="fa fa-filter fa-lg"></i>
+            </button>
+            <button id="btnFilterScratch" class="btn btn-filter" type="button" onclick="filterApp('scratch')">
+                Scratch
+                <i class="fa fa-filter fa-lg"></i>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>
+                {{ .Content }}
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        {{ range .Pages.ByTitle  }}
+            {{ partial "projectCard.html" . }}
+        {{ end }}
+    </div>
+</div>
+<script src="js/main.js"></script>
+{{ end }}

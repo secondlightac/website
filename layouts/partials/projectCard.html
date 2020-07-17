@@ -1,12 +1,28 @@
 {{ $img := .Resources.GetMatch "image.*" }}
-<div class="col-md-4 col-sm-6 col-12 mb-5">
+{{ $difficulty_text := .Params.difficulty }}
+{{ if (eq .Params.difficulty 1) }}
+    {{ $difficulty_text = "Einsteiger" }}
+{{ end }}
+{{ if (eq .Params.difficulty 2) }}
+    {{ $difficulty_text = "Anfänger" }}
+{{ end }}
+{{ if (eq .Params.difficulty 3) }}
+    {{ $difficulty_text = "Fortgeschritten" }}
+{{ end }}
+{{ if (eq .Params.difficulty 4) }}
+    {{ $difficulty_text = "Experte" }}
+{{ end }}
+{{ if (eq .Params.difficulty 5) }}
+    {{ $difficulty_text = "Meister" }}
+{{ end }}
+<div class="col-md-4 col-sm-6 col-12 mb-5 level" data-tags="{{ range .Params.tags }}{{.tag}}|{{ end }}" data-title="{{ .Title }}" data-difficulty="{{ .Params.difficulty }}">
     <div class="card h-100">
         {{ with $img }}
             {{ $pic := .Fill "480x360 Bottom" }}
             <img class="card-img-top img-fluid" src="{{ $pic.RelPermalink }}" alt="Card Image">
         {{ end }}
         <div class="card-body">
-            <h4 class="card-title">{{ .Title }}</h4>
+            <h4 class="card-title">{{ .Title }} <br> <span style="font-size: 1rem; font-style: italic">{{ $difficulty_text }}</span></h4>
             <p class="card-text">{{ .Content }}</p>
         </div>
         <div class="card-footer">

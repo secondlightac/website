@@ -24,9 +24,9 @@ copyright = "<span class=\"copyright\">Copyright &copy; <script>document.write(n
     weight = -80
 
  [[menu.main]]
-      name = "Projekte"
+      name = "Level"
       parent = "Lehrmaterial"
-      url = "/projekte/"
+      url = "/level/"
 
   [[menu.main]]
       name = "Inhalte"
