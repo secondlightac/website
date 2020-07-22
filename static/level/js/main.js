@@ -8,7 +8,7 @@ const btnFilterScratch = '#btnFilterScratch';
 REOrganizer.init('.level');
 
 let reoSettings = {
-    sort: 'title',
+    sort: 'difficulty',
     reverse: false,
     filter: 'none'
 }
